@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../skin/skin-standard-xml/show.xsl" href2="/!/skin/skin-standard-xml/show.xsl"?>
+<cluster layout="view"
+	title="NDSS::administration/readCluster (NDSS Cluster Status)"
+	baseURI="http://ae3.kimsufi.meloscope.co.nz/!/test/test.xml"
+	>
+	<client geo="SE" ip="90.139.94.153" format="xml" id="ndm-myx"
+		date="2019-05-11T12:54:47.306Z" standalone="false" 
+		develRoot="../skin" webRoot="http://ae3.kimsufi.meloscope.co.nz">
+		<menu src="../other/root-menu-source.html" />
+	</client>
+	<prefix layout="form" title="Query Parameters" zoom="row"
+		cssClass="ui-secondary">
+		<fields>
+			<field id="state" name="state" title="Node State Detail"
+				type="select" variant="select">
+				<option value="0" title="Compact (UI Default)" />
+				<option value="1" title="With Current Load/Usage" />
+				<option value="2" title="With Event Counters" />
+				<option value="127" title="All Fields" />
+				<option value="async" title="Async Requests" />
+			</field>
+			<submit icon="application_put" title="Apply Query Parameters" />
+		</fields>
+	</prefix>
+	<fields>
+		<field name="publicName" title="Public Name" variant="link"
+			prefix="https://" suffix="/administration/readCluster"
+			icon="world_go" />
+		<field name="localNode" title="Local Node" variant="view" />
+		<field name="nodes" title="All Nodes" variant="list" />
+		<help src="/documentation#administration/readCluster" />
+	</fields>
+	<publicName>ndss.dev.ndm9.xyz</publicName>
+	<localNode layout="view">
+		<fields>
+			<field name="name" title="Host Name" type="string"
+				variant="link" prefix="https://"
+				suffix="/administration/readCluster" icon="world_go" />
+			<field name="level6_host" title="TCP Host" />
+			<field name="level6_port" title="TCP Port" type="number"
+				variant="integer" />
+			<field name="." title="UDP Host" variant="rows"
+				elementName="level3_host" />
+			<field name="level3_port" title="UDP Port" type="number"
+				variant="integer" />
+		</fields>
+		<name>ndss-rz.ndm9.xyz</name>
+		<level6_host>ndss-rz.ndm9.xyz</level6_host>
+		<level6_port>443</level6_port>
+		<level3_port>4047</level3_port>
+		<level3_host>l3r3.ndm9.xyz:21000</level3_host>
+	</localNode>
+	<nodes layout="list">
+		<columns>
+			<column id="name" title="Host Name" variant="link"
+				prefix="https://" suffix="/administration/readCluster"
+				icon="world_go" />
+			<column id="uniq" title="Uniq" type="number" variant="integer" />
+			<column id="level6_host" title="TCP Host" />
+			<column id="level6_port" title="TCP Port" type="number"
+				variant="integer" />
+			<column id="." title="UDP Host" variant="rows"
+				elementName="level3_host" />
+			<column id="level3_port" title="UDP Port" type="number"
+				variant="integer" />
+			<column name="session" id="session" title="UDP Status"
+				type="constant" variant="select">
+				<option icon="exclamation" value="error" title="Error" />
+				<option icon="cancel" value="disabled" title="Disabled" />
+				<option icon="time_go" value="inactive" title="Inactive" />
+				<option icon="link_edit" value="enabled" title="Enabled" />
+				<option icon="hourglass_link" value="search" title="Search" />
+				<option icon="link_go" value="active" title="Active" />
+				<option icon="anchor" value="local" title="Local" />
+			</column>
+			<column id="status" title="Service Status" type="layout"
+				variant="layout" />
+		</columns>
+		<item hl="error" type="ndss" name="macmyx.local" uniq="10"
+			level6_host="sunnydale.myx.ru" level6_port="443" level3_port="4047"
+			session="enabled" status="off-line"
+			ui-state="mode=readState&amp;state=127&amp;node=macmyx.local">
+			<level3_host>sunnydale.myx.ru:0</level3_host>
+		</item>
+		<item hl="true" type="ndss" name="ndss-hz.ndm9.xyz" uniq="11"
+			level6_host="ndss-hz.ndm9.xyz" level6_port="443" level3_port="4047"
+			session="active"
+			ui-state="mode=readState&amp;state=127&amp;node=ndss-hz.ndm9.xyz">
+			<status layout="view">
+				<values layout="view" serial="229387" level="0" level0="true"
+					major="5" minor="679">
+					<fields>
+						<field name="version" title="Version" />
+						<field name="uptime" title="Uptime" cssClass="hl-NORMAL"
+							variant="period" scale="1000" />
+					</fields>
+					<version>5.679</version>
+					<uptime>760383</uptime>
+				</values>
+				<fields>
+					<field name="version" title="Version" />
+					<field name="uptime" title="Uptime" cssClass="hl-NORMAL"
+						variant="period" scale="1000" />
+				</fields>
+			</status>
+			<level3_host>l3hz.ndm9.xyz:21000</level3_host>
+		</item>
+		<item hl="local" name="ndss-rz.ndm9.xyz" uniq="12"
+			level6_host="ndss-rz.ndm9.xyz" level6_port="443" level3_port="4047"
+			session="local"
+			ui-state="mode=readState&amp;state=127&amp;node=ndss-rz.ndm9.xyz">
+			<status layout="view">
+				<values layout="view" level="0" major="5" minor="679">
+					<fields>
+						<field name="version" title="Version" />
+						<field name="uptime" title="Uptime" cssClass="hl-NORMAL"
+							variant="period" scale="1000" />
+					</fields>
+					<version>5.679</version>
+					<uptime>761686</uptime>
+				</values>
+				<fields>
+					<field name="version" title="Version" />
+					<field name="uptime" title="Uptime" cssClass="hl-NORMAL"
+						variant="period" scale="1000" />
+				</fields>
+			</status>
+			<level3_host>l3r3.ndm9.xyz:21000</level3_host>
+		</item>
+		<commands2 icon="world_go"
+			title="Open By Public Host Name..." prefix="https://" field="name" />
+	</nodes>
+	<suffix layout="message" code="200"
+		message="Cluster nodes status collected.">
+		<detail layout="list">
+			<columns>
+				<column id="type" title="Type" />
+				<column id="peer" title="Peer" />
+				<column id="detail" title="Detail" />
+				<column id="elapsed" title="Time" variant="period" scale="1" />
+			</columns>
+			<item elapsed="1"
+				origin="[TaskUdpSingle &quot;macmyx.local&quot; [MsgReadServiceState (level=0)] / finished]"
+				type="off-line" hl="error" peer="macmyx.local"
+				detail="Peer is off-line" />
+			<item elapsed="47"
+				origin="[TaskUdpSingle &quot;ndss-hz.ndm9.xyz&quot; [MsgReadServiceState (level=0)] / started]"
+				type="reply-final" peer="ndss-hz.ndm9.xyz"
+				detail="[MsgServiceStateInfo {&quot;serial&quot;:229387,&quot;level&quot;:0,&quot;level0&quot;:true,&quot;major&quot;:5,&quot;minor&quot;:679,&quot;version&quot;:&quot;5.679&quot;,&quot;uptime&quot;:760383}]" />
+		</detail>
+	</suffix>
+</cluster>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../skin/skin-standard-xml/show.xsl" href2="/!/skin/skin-standard-xml/show.xsl"?>
+<index title="AE3::index (Web Interface Welcome Page)"
+	layout="menu" zoom="document"
+	baseURI="http://ae3.kimsufi.meloscope.co.nz/!/test/test.xml"
+	>
+	<command key="?login" icon="key_go" ui="true" access="public"
+		title="Login using basic http authentication" />
+	<client geo="SE" ip="90.139.94.153" format="xml"
+		date="2019-05-11T13:59:52.773Z" 
+		develRoot="../skin" webRoot="http://ae3.kimsufi.meloscope.co.nz">
+		<menu src="../other/root-menu-source.html" />
+	</client>
+	<command icon="house" title="Root index menu" ui="false"
+		hidden="true" admin="public" key="index" />
+	<index layout="menu" icon="disk"
+		title="Download &amp; Install (Distro)" ui="true" hidden="false"
+		admin="public" key="ae3.distro/">
+		<command icon="disk"
+			title="Download &amp; Installation (AE3 Distro)" ui="false"
+			hidden="true" admin="public" key="ae3.distro/index" />
+		<command icon="disk" title="Preset: minimal" depthLimit="2"
+			ui="true" hidden="false" admin="public" key="ae3.distro/minimal/" />
+		<command icon="disk" title="Preset: complete" depthLimit="2"
+			ui="true" hidden="false" admin="public" key="ae3.distro/complete/" />
+	</index>
+	<index layout="menu" icon="help" title="Documentation (Manuals)"
+		ui="true" hidden="false" admin="public" key="manual/">
+		<command icon="help" title="Documentation (Manuals)"
+			ui="false" hidden="true" admin="public" key="manual/index" />
+		<index layout="menu" icon="pictures"
+			title="Group: administrator" depthLimit="2" ui="true" hidden="false"
+			admin="public" key="manual/administrator/">
+			<command icon="help" title="Manuals: Group: administrator"
+				ui="false" hidden="true" admin="public"
+				key="manual/administrator/index" />
+			<command icon="book_next" title="AE3 Installation" ui="true"
+				hidden="false" admin="public"
+				key="manual/administrator/admin-ae3-installation/" />
+			<index layout="menu" icon="pictures" title="AE3 Daemon Process"
+				depthLimit="3" ui="true" hidden="false" admin="public"
+				key="manual/administrator/ae3-daemon-process/">
+				<command icon="help" title="Manuals: AE3 Daemon Process"
+					ui="false" hidden="true" admin="public"
+					key="manual/administrator/ae3-daemon-process/index" />
+			</index>
+		</index>
+		<index layout="menu" icon="pictures" title="Group: developer"
+			depthLimit="2" ui="true" hidden="false" admin="public"
+			key="manual/developer/">
+			<command icon="help" title="Manuals: Group: developer"
+				ui="false" hidden="true" admin="public" key="manual/developer/index" />
+			<command icon="link_go" title="AE3-INFO: developer" ui="true"
+				hidden="false" admin="public"
+				key="/!/skin/skin-ae3-info/developer.htm" />
+			<command icon="link_go" title="AE3 Quick Reference" ui="true"
+				hidden="false" admin="public"
+				key="/!/public/resources/lib/ru.myx.ae3.manual/QuickReference.xml" />
+			<command icon="book_next" title="Context Global Objects"
+				ui="true" hidden="false" admin="public"
+				key="manual/developer/developer-ae3.globals/" />
+			<command icon="book_next" title="Core AE3 Types (Classes)"
+				ui="true" hidden="false" admin="public"
+				key="manual/developer/developer-ae3.types/" />
+			<index layout="menu" icon="pictures" title="Core AE3 Packages"
+				depthLimit="3" ui="true" hidden="false" admin="public"
+				key="manual/developer/developer-pkg.ae3/">
+				<command icon="help" title="Manuals: Core AE3 Packages"
+					ui="false" hidden="true" admin="public"
+					key="manual/developer/developer-pkg.ae3/index" />
+				<command icon="book_next" title="ae3.base Package Reference"
+					ui="true" hidden="false" admin="public"
+					key="manual/developer/developer-pkg.ae3/doc-pkg.ae3.base/" />
+				<command icon="book_next" title="ae3.pdf Package Reference"
+					ui="true" hidden="false" admin="public"
+					key="manual/developer/developer-pkg.ae3/doc-pkg.ae3.pdf/" />
+				<command icon="book_next" title="ae3.vfs Package Reference"
+					ui="true" hidden="false" admin="public"
+					key="manual/developer/developer-pkg.ae3/doc-pkg.ae3.vfs/" />
+				<command icon="book_next" title="ae3.xls Package Reference"
+					ui="true" hidden="false" admin="public"
+					key="manual/developer/developer-pkg.ae3/doc-pkg.ae3.xls/" />
+			</index>
+			<command icon="link_go" title="howto: make a package"
+				ui="true" hidden="false" admin="public"
+				key="/!/skin/skin-ae3-info/ae3/howto-packaging.htm" />
+			<command icon="link_go" title="Language: ACM.TPL" ui="true"
+				hidden="false" admin="public"
+				key="/!/skin/skin-ae3.impl.language.tpl/language-acm.tpl.html" />
+			<command icon="link_go" title="Skin Standard HTML" ui="true"
+				hidden="false" admin="public"
+				key="/!/skin/skin-standard-html/skin-standard-html.html" />
+			<command icon="link_go" title="Skin Standard XML" ui="true"
+				hidden="false" admin="public"
+				key="/!/skin/skin-standard-xml/skin-standard-xml.xml" />
+		</index>
+		<index layout="menu" icon="pictures" title="Group: example"
+			depthLimit="2" ui="true" hidden="false" admin="public"
+			key="manual/example/">
+			<command icon="help" title="Manuals: Group: example"
+				ui="false" hidden="true" admin="public" key="manual/example/index" />
+			<command icon="book_next" title="Hello World" ui="true"
+				hidden="false" admin="public"
+				key="manual/example/example-hello-world/" />
+		</index>
+		<index layout="menu" icon="pictures" title="Group: internals"
+			depthLimit="2" ui="true" hidden="false" admin="public"
+			key="manual/internals/">
+			<command icon="help" title="Manuals: Group: internals"
+				ui="false" hidden="true" admin="public" key="manual/internals/index" />
+			<command icon="link_go" title="AE3-VM-VLIW Info" ui="true"
+				hidden="false" admin="public" key="/developer/vm-vliw/" />
+			<command icon="book_next"
+				title="S4-LCL-BDBJE (BerkleyDB Java Edition Driver for S4 Local) Info"
+				ui="true" hidden="false" admin="public"
+				key="manual/internals/s4lcl-bdbje-info/" />
+		</index>
+	</index>
+	<index layout="menu" icon="user_red" title="Developer" ui="true"
+		hidden="false" admin="public" key="developer/">
+		<command icon="house" title="Developer Pages" ui="false"
+			hidden="true" admin="public" key="developer/index" />
+		<command icon="stop" title="Nice Error" ui="true"
+			hidden="false" admin="public" key="developer/error" />
+		<command icon="exclamation" title="Nice Exception" ui="true"
+			hidden="false" admin="public" key="developer/exception" />
+		<command icon="key" title="Authenticate" ui="true"
+			hidden="false" admin="public" key="developer/authenticate" />
+		<command icon="key_delete" title="Authentication Failed"
+			ui="true" hidden="false" admin="public"
+			key="developer/authenticationFailed" />
+		<command icon="key_go" title="Authentication Success"
+			ui="true" hidden="false" admin="public"
+			key="developer/authenticationSuccess" />
+		<command icon="delete" title="Access Denied" ui="true"
+			hidden="false" admin="public" key="developer/denied" />
+		<command icon="clock" title="Date" ui="true" hidden="false"
+			admin="public" key="developer/date" />
+		<index layout="menu" icon="bullet_go" title="Other Places"
+			depthLimit="2" ui="true" hidden="false" admin="public"
+			key="developer/other">
+			<index layout="menu" icon="bullet_go" title="Skin: AE3 Info"
+				ui="true" hidden="false" admin="public" key="/!/skin/skin-ae3-info/">
+				<command icon="help"
+					title="AE3: Quick Reference (coding examples)" ui="true"
+					hidden="false" admin="public"
+					key="/!/public/resources/lib/ru.myx.ae3.manual/QuickReference.xml" />
+				<command icon="layout_content"
+					title="Layout Render&#39;s Introduction / Example" ui="true"
+					hidden="false" admin="public"
+					key="/!/skin/skin-ae3-info/layouts.jsld" />
+				<command icon="world_edit"
+					title="FamFamFam Silk Icon Set: Preview and License" ui="true"
+					hidden="false" admin="public"
+					key="/__i/famfamfam.com/silk/readme.html" />
+			</index>
+			<index layout="menu" icon="bullet_go" title="Skin: JS Client"
+				ui="true" hidden="false" admin="public" key="/!/skin/skin-jsclient/">
+				<command icon="table_multiple"
+					title="Skin: JS Client: Unicode Character Browser" ui="true"
+					hidden="false" admin="public"
+					key="/!/skin/skin-jsclient/test/lib/charcode.html" />
+			</index>
+			<command icon="bullet_go" title="Skin: Standard HTML"
+				ui="true" hidden="false" admin="public"
+				key="/!/skin/skin-standard-html/" />
+			<command icon="bullet_go" title="Skin: Standard XML"
+				ui="true" hidden="false" admin="public"
+				key="/!/skin/skin-standard-xml/" />
+			<index layout="menu" icon="bullet_go"
+				title="Skin: Developer Tools" ui="true" hidden="false"
+				admin="public" key="/!/skin/skin-developer-tools/">
+				<command icon="keyboard_magnify"
+					title="Try-It-Yourself Browser&#39;s keyboard event properties"
+					ui="true" hidden="false" admin="public"
+					key="/!/skin/skin-developer-tools/client-js/try-key-events.htm" />
+				<command icon="page_white_gear"
+					title="Format Text as JS String" ui="true" hidden="false"
+					admin="public"
+					key="/!/skin/skin-developer-tools/try-formatJsString.htm" />
+				<command icon="page_white_gear"
+					title="Format Text as (UTF8) Base64" ui="true" hidden="false"
+					admin="public"
+					key="/!/skin/skin-developer-tools/try-formatStringAsUtf8Base64.htm" />
+			</index>
+		</index>
+		<command icon="error" title="Example Response Accessor"
+			ui="false" hidden="true" admin="public"
+			key="developer/exampleResponse" />
+	</index>
+	<command title="System: resource accessor" ui="false"
+		hidden="true" admin="public" key="resource" />
+	<command icon="shield_go" title="Server&#39;s Root Certificate"
+		ui="false" hidden="true" admin="public" key="resource/root-ca.crt" />
+</index>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../skin/skin-standard-xml/show.xsl" href2="/!/skin/skin-standard-xml/show.xsl"?>
+<index title="AE3::index (Web Interface Welcome Page)"
+	layout="menu" zoom="document" 
+	baseURI2="http://ae3.kimsufi.meloscope.co.nz/!/test/test.xml"
+	>
+	<command key="?login" icon="key_go" ui="true" access="public"
+		title="Login using basic http authentication" />
+	<client geo="SE" ip="90.139.94.153" format="xml"
+		date="2019-05-11T13:59:52.773Z" 
+		develRoot="../skin" webRoot="http://ae3.kimsufi.meloscope.co.nz">
+		<menu src="../other/root-menu-source.html" />
+	</client>
+	<command icon="house" title="Root index menu" ui="false"
+		hidden="true" admin="public" key="index" />
+	<index layout="menu" icon="disk"
+		title="Test Pages" ui="true" hidden="false"
+		admin="public" key="test/">
+		<command icon="disk" title="Page 001: List, UDP Satellites" depthLimit="2"
+			ui="true" hidden="false" admin="public" key="./001-list-udp-satellites.xml" />
+		<command icon="disk" title="Page 002: Form, Dial Tunnel" depthLimit="2"
+			ui="true" hidden="false" admin="public" key="./002-form-dial-tunnel.xml" />
+		<command icon="disk" title="Page 003: View, Cluster Status" depthLimit="2"
+			ui="true" hidden="false" admin="public" key="./003-view-cluster-status.xml" />
+		<command icon="disk" title="Page 004: Menu, AE3 Index" depthLimit="2"
+			ui="true" hidden="false" admin="public" key="./004-menu-ae3-index.xml" />
+	</index>
+	<index layout="menu" icon="user_red" title="Developer" ui="true"
+		hidden="false" admin="public" key="developer/">
+		<command icon="house" title="Developer Pages" ui="false"
+			hidden="true" admin="public" key="developer/index" />
+		<command icon="stop" title="Nice Error" ui="true"
+			hidden="false" admin="public" key="developer/error" />
+		<command icon="exclamation" title="Nice Exception" ui="true"
+			hidden="false" admin="public" key="developer/exception" />
+		<command icon="key" title="Authenticate" ui="true"
+			hidden="false" admin="public" key="developer/authenticate" />
+		<command icon="key_delete" title="Authentication Failed"
+			ui="true" hidden="false" admin="public"
+			key="developer/authenticationFailed" />
+		<command icon="key_go" title="Authentication Success"
+			ui="true" hidden="false" admin="public"
+			key="developer/authenticationSuccess" />
+		<command icon="delete" title="Access Denied" ui="true"
+			hidden="false" admin="public" key="developer/denied" />
+		<command icon="clock" title="Date" ui="true" hidden="false"
+			admin="public" key="developer/date" />
+		<index layout="menu" icon="bullet_go" title="Other Places"
+			depthLimit="2" ui="true" hidden="false" admin="public"
+			key="developer/other">
+			<index layout="menu" icon="bullet_go" title="Skin: AE3 Info"
+				ui="true" hidden="false" admin="public" key="/!/skin/skin-ae3-info/">
+				<command icon="help"
+					title="AE3: Quick Reference (coding examples)" ui="true"
+					hidden="false" admin="public"
+					key="/!/public/resources/lib/ru.myx.ae3.manual/QuickReference.xml" />
+				<command icon="layout_content"
+					title="Layout Render&#39;s Introduction / Example" ui="true"
+					hidden="false" admin="public"
+					key="/!/skin/skin-ae3-info/layouts.jsld" />
+				<command icon="world_edit"
+					title="FamFamFam Silk Icon Set: Preview and License" ui="true"
+					hidden="false" admin="public"
+					key="/__i/famfamfam.com/silk/readme.html" />
+			</index>
+			<index layout="menu" icon="bullet_go" title="Skin: JS Client"
+				ui="true" hidden="false" admin="public" key="/!/skin/skin-jsclient/">
+				<command icon="table_multiple"
+					title="Skin: JS Client: Unicode Character Browser" ui="true"
+					hidden="false" admin="public"
+					key="/!/skin/skin-jsclient/test/lib/charcode.html" />
+			</index>
+			<command icon="bullet_go" title="Skin: Standard HTML"
+				ui="true" hidden="false" admin="public"
+				key="/!/skin/skin-standard-html/" />
+			<command icon="bullet_go" title="Skin: Standard XML"
+				ui="true" hidden="false" admin="public"
+				key="/!/skin/skin-standard-xml/" />
+			<index layout="menu" icon="bullet_go"
+				title="Skin: Developer Tools" ui="true" hidden="false"
+				admin="public" key="/!/skin/skin-developer-tools/">
+				<command icon="keyboard_magnify"
+					title="Try-It-Yourself Browser&#39;s keyboard event properties"
+					ui="true" hidden="false" admin="public"
+					key="/!/skin/skin-developer-tools/client-js/try-key-events.htm" />
+				<command icon="page_white_gear"
+					title="Format Text as JS String" ui="true" hidden="false"
+					admin="public"
+					key="/!/skin/skin-developer-tools/try-formatJsString.htm" />
+				<command icon="page_white_gear"
+					title="Format Text as (UTF8) Base64" ui="true" hidden="false"
+					admin="public"
+					key="/!/skin/skin-developer-tools/try-formatStringAsUtf8Base64.htm" />
+			</index>
+		</index>
+		<command icon="error" title="Example Response Accessor"
+			ui="false" hidden="true" admin="public"
+			key="developer/exampleResponse" />
+	</index>
+	<command title="System: resource accessor" ui="false"
+		hidden="true" admin="public" key="resource" />
+	<command icon="shield_go" title="Server&#39;s Root Certificate"
+		ui="false" hidden="true" admin="public" key="resource/root-ca.crt" />
+</index>

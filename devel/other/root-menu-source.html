@@ -1,0 +1,791 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	submenu = window.submenu = [
+			{
+				"title" : "Log in",
+				"href" : "/?login",
+				"icon" : "key"
+			},
+			{
+				"title" : "Core AE3 Packages",
+				"access" : "public",
+				"href" : "/manual/developer/developer-pkg.ae3/",
+				"icon" : "pictures",
+				"submenu" : [
+						{
+							"title" : "Manuals: Core AE3 Packages",
+							"access" : "public",
+							"href" : "/manual/developer/developer-pkg.ae3/index",
+							"icon" : "help"
+						},
+						{
+							"title" : "ae3.base Package Reference",
+							"access" : "public",
+							"href" : "/manual/developer/developer-pkg.ae3/doc-pkg.ae3.base/",
+							"icon" : "book_next"
+						},
+						{
+							"title" : "ae3.pdf Package Reference",
+							"access" : "public",
+							"href" : "/manual/developer/developer-pkg.ae3/doc-pkg.ae3.pdf/",
+							"icon" : "book_next"
+						},
+						{
+							"title" : "ae3.vfs Package Reference",
+							"access" : "public",
+							"href" : "/manual/developer/developer-pkg.ae3/doc-pkg.ae3.vfs/",
+							"icon" : "book_next"
+						},
+						{
+							"title" : "ae3.xls Package Reference",
+							"access" : "public",
+							"href" : "/manual/developer/developer-pkg.ae3/doc-pkg.ae3.xls/",
+							"icon" : "book_next"
+						} ]
+			},
+			{
+				"title" : "Group: developer",
+				"access" : "public",
+				"href" : "/manual/developer/",
+				"icon" : "pictures",
+				"submenu" : [
+						{
+							"title" : "Manuals: Group: developer",
+							"access" : "public",
+							"href" : "/manual/developer/index",
+							"icon" : "help"
+						},
+						{
+							"title" : "AE3-INFO: developer",
+							"access" : "public",
+							"href" : "/!/skin/skin-ae3-info/developer.htm",
+							"icon" : "link_go"
+						},
+						{
+							"title" : "AE3 Quick Reference",
+							"access" : "public",
+							"href" : "/!/public/resources/lib/ru.myx.ae3.manual/QuickReference.xml",
+							"icon" : "link_go"
+						},
+						{
+							"title" : "Context Global Objects",
+							"access" : "public",
+							"href" : "/manual/developer/developer-ae3.globals/",
+							"icon" : "book_next"
+						},
+						{
+							"title" : "Core AE3 Types (Classes)",
+							"access" : "public",
+							"href" : "/manual/developer/developer-ae3.types/",
+							"icon" : "book_next"
+						},
+						{
+							"title" : "Core AE3 Packages",
+							"access" : "public",
+							"href" : "/manual/developer/developer-pkg.ae3/",
+							"icon" : "pictures",
+							"submenu" : [
+									{
+										"title" : "Manuals: Core AE3 Packages",
+										"access" : "public",
+										"href" : "/manual/developer/developer-pkg.ae3/index",
+										"icon" : "help"
+									},
+									{
+										"title" : "ae3.base Package Reference",
+										"access" : "public",
+										"href" : "/manual/developer/developer-pkg.ae3/doc-pkg.ae3.base/",
+										"icon" : "book_next"
+									},
+									{
+										"title" : "ae3.pdf Package Reference",
+										"access" : "public",
+										"href" : "/manual/developer/developer-pkg.ae3/doc-pkg.ae3.pdf/",
+										"icon" : "book_next"
+									},
+									{
+										"title" : "ae3.vfs Package Reference",
+										"access" : "public",
+										"href" : "/manual/developer/developer-pkg.ae3/doc-pkg.ae3.vfs/",
+										"icon" : "book_next"
+									},
+									{
+										"title" : "ae3.xls Package Reference",
+										"access" : "public",
+										"href" : "/manual/developer/developer-pkg.ae3/doc-pkg.ae3.xls/",
+										"icon" : "book_next"
+									} ]
+						},
+						{
+							"title" : "howto: make a package",
+							"access" : "public",
+							"href" : "/!/skin/skin-ae3-info/ae3/howto-packaging.htm",
+							"icon" : "link_go"
+						},
+						{
+							"title" : "Language: ACM.TPL",
+							"access" : "public",
+							"href" : "/!/skin/skin-ae3.impl.language.tpl/language-acm.tpl.html",
+							"icon" : "link_go"
+						},
+						{
+							"title" : "Skin Standard HTML",
+							"access" : "public",
+							"href" : "/!/skin/skin-standard-html/skin-standard-html.html",
+							"icon" : "link_go"
+						},
+						{
+							"title" : "Skin Standard XML",
+							"access" : "public",
+							"href" : "/!/skin/skin-standard-xml/skin-standard-xml.xml",
+							"icon" : "link_go"
+						} ]
+			},
+			{
+				"title" : "Documentation (Manuals)",
+				"access" : "public",
+				"href" : "/manual/",
+				"icon" : "help",
+				"submenu" : [
+						{
+							"title" : "Documentation (Manuals)",
+							"access" : "public",
+							"href" : "/manual/index",
+							"icon" : "help"
+						},
+						{
+							"title" : "Group: administrator",
+							"access" : "public",
+							"href" : "/manual/administrator/",
+							"icon" : "pictures",
+							"submenu" : [
+									{
+										"title" : "Manuals: Group: administrator",
+										"access" : "public",
+										"href" : "/manual/administrator/index",
+										"icon" : "help"
+									},
+									{
+										"title" : "AE3 Installation",
+										"access" : "public",
+										"href" : "/manual/administrator/admin-ae3-installation/",
+										"icon" : "book_next"
+									},
+									{
+										"title" : "AE3 Daemon Process",
+										"access" : "public",
+										"href" : "/manual/administrator/ae3-daemon-process/",
+										"icon" : "pictures",
+										"submenu" : [
+												{
+													"title" : "Manuals: AE3 Daemon Process",
+													"access" : "public",
+													"href" : "/manual/administrator/ae3-daemon-process/index",
+													"icon" : "help"
+												},
+												{
+													"title" : "AE3 Exit Codes",
+													"access" : "public",
+													"href" : "/manual/administrator/ae3-daemon-process/admin-exit-codes/",
+													"icon" : "pictures",
+													"submenu" : [
+															{
+																"title" : "Manuals: AE3 Exit Codes",
+																"access" : "public",
+																"href" : "/manual/administrator/ae3-daemon-process/admin-exit-codes/index",
+																"icon" : "help"
+															},
+															{
+																"title" : "Exit Code 0 - success, normal shutdown",
+																"access" : "public",
+																"href" : "/manual/administrator/ae3-daemon-process/admin-exit-codes/admin-exit-code-0/",
+																"icon" : "book_next"
+															} ]
+												} ]
+									} ]
+						},
+						{
+							"title" : "Group: developer",
+							"access" : "public",
+							"href" : "/manual/developer/",
+							"icon" : "pictures",
+							"submenu" : [
+									{
+										"title" : "Manuals: Group: developer",
+										"access" : "public",
+										"href" : "/manual/developer/index",
+										"icon" : "help"
+									},
+									{
+										"title" : "AE3-INFO: developer",
+										"access" : "public",
+										"href" : "/!/skin/skin-ae3-info/developer.htm",
+										"icon" : "link_go"
+									},
+									{
+										"title" : "AE3 Quick Reference",
+										"access" : "public",
+										"href" : "/!/public/resources/lib/ru.myx.ae3.manual/QuickReference.xml",
+										"icon" : "link_go"
+									},
+									{
+										"title" : "Context Global Objects",
+										"access" : "public",
+										"href" : "/manual/developer/developer-ae3.globals/",
+										"icon" : "book_next"
+									},
+									{
+										"title" : "Core AE3 Types (Classes)",
+										"access" : "public",
+										"href" : "/manual/developer/developer-ae3.types/",
+										"icon" : "book_next"
+									},
+									{
+										"title" : "Core AE3 Packages",
+										"access" : "public",
+										"href" : "/manual/developer/developer-pkg.ae3/",
+										"icon" : "pictures",
+										"submenu" : [
+												{
+													"title" : "Manuals: Core AE3 Packages",
+													"access" : "public",
+													"href" : "/manual/developer/developer-pkg.ae3/index",
+													"icon" : "help"
+												},
+												{
+													"title" : "ae3.base Package Reference",
+													"access" : "public",
+													"href" : "/manual/developer/developer-pkg.ae3/doc-pkg.ae3.base/",
+													"icon" : "book_next"
+												},
+												{
+													"title" : "ae3.pdf Package Reference",
+													"access" : "public",
+													"href" : "/manual/developer/developer-pkg.ae3/doc-pkg.ae3.pdf/",
+													"icon" : "book_next"
+												},
+												{
+													"title" : "ae3.vfs Package Reference",
+													"access" : "public",
+													"href" : "/manual/developer/developer-pkg.ae3/doc-pkg.ae3.vfs/",
+													"icon" : "book_next"
+												},
+												{
+													"title" : "ae3.xls Package Reference",
+													"access" : "public",
+													"href" : "/manual/developer/developer-pkg.ae3/doc-pkg.ae3.xls/",
+													"icon" : "book_next"
+												} ]
+									},
+									{
+										"title" : "howto: make a package",
+										"access" : "public",
+										"href" : "/!/skin/skin-ae3-info/ae3/howto-packaging.htm",
+										"icon" : "link_go"
+									},
+									{
+										"title" : "Language: ACM.TPL",
+										"access" : "public",
+										"href" : "/!/skin/skin-ae3.impl.language.tpl/language-acm.tpl.html",
+										"icon" : "link_go"
+									},
+									{
+										"title" : "Skin Standard HTML",
+										"access" : "public",
+										"href" : "/!/skin/skin-standard-html/skin-standard-html.html",
+										"icon" : "link_go"
+									},
+									{
+										"title" : "Skin Standard XML",
+										"access" : "public",
+										"href" : "/!/skin/skin-standard-xml/skin-standard-xml.xml",
+										"icon" : "link_go"
+									} ]
+						},
+						{
+							"title" : "Group: example",
+							"access" : "public",
+							"href" : "/manual/example/",
+							"icon" : "pictures",
+							"submenu" : [
+									{
+										"title" : "Manuals: Group: example",
+										"access" : "public",
+										"href" : "/manual/example/index",
+										"icon" : "help"
+									},
+									{
+										"title" : "Hello World",
+										"access" : "public",
+										"href" : "/manual/example/example-hello-world/",
+										"icon" : "book_next"
+									} ]
+						},
+						{
+							"title" : "Group: internals",
+							"access" : "public",
+							"href" : "/manual/internals/",
+							"icon" : "pictures",
+							"submenu" : [
+									{
+										"title" : "Manuals: Group: internals",
+										"access" : "public",
+										"href" : "/manual/internals/index",
+										"icon" : "help"
+									},
+									{
+										"title" : "AE3-VM-VLIW Info",
+										"access" : "public",
+										"href" : "/developer/vm-vliw/",
+										"icon" : "link_go"
+									},
+									{
+										"title" : "S4-LCL-BDBJE (BerkleyDB Java Edition Driver for S4 Local) Info",
+										"access" : "public",
+										"href" : "/manual/internals/s4lcl-bdbje-info/",
+										"icon" : "book_next"
+									} ]
+						} ]
+			},
+			{
+				"icon" : "house",
+				"title" : "Root Menu",
+				"group" : true,
+				"submenu" : [
+						{
+							"title" : "Root index menu",
+							"access" : "public",
+							"href" : "/index",
+							"icon" : "house"
+						},
+						{
+							"title" : "Download & Install (Distro)",
+							"access" : "public",
+							"href" : "/ae3.distro/",
+							"icon" : "disk",
+							"submenu" : [
+									{
+										"title" : "Download & Installation (AE3 Distro)",
+										"access" : "public",
+										"href" : "/ae3.distro/index",
+										"icon" : "disk"
+									}, {
+										"title" : "Preset: minimal",
+										"access" : "public",
+										"href" : "/ae3.distro/minimal/",
+										"icon" : "disk"
+									}, {
+										"title" : "Preset: complete",
+										"access" : "public",
+										"href" : "/ae3.distro/complete/",
+										"icon" : "disk"
+									} ]
+						},
+						{
+							"title" : "Documentation (Manuals)",
+							"access" : "public",
+							"href" : "/manual/",
+							"icon" : "help",
+							"submenu" : [
+									{
+										"title" : "Documentation (Manuals)",
+										"access" : "public",
+										"href" : "/manual/index",
+										"icon" : "help"
+									},
+									{
+										"title" : "Group: administrator",
+										"access" : "public",
+										"href" : "/manual/administrator/",
+										"icon" : "pictures",
+										"submenu" : [
+												{
+													"title" : "Manuals: Group: administrator",
+													"access" : "public",
+													"href" : "/manual/administrator/index",
+													"icon" : "help"
+												},
+												{
+													"title" : "AE3 Installation",
+													"access" : "public",
+													"href" : "/manual/administrator/admin-ae3-installation/",
+													"icon" : "book_next"
+												},
+												{
+													"title" : "AE3 Daemon Process",
+													"access" : "public",
+													"href" : "/manual/administrator/ae3-daemon-process/",
+													"icon" : "pictures",
+													"submenu" : [
+															{
+																"title" : "Manuals: AE3 Daemon Process",
+																"access" : "public",
+																"href" : "/manual/administrator/ae3-daemon-process/index",
+																"icon" : "help"
+															},
+															{
+																"title" : "AE3 Exit Codes",
+																"access" : "public",
+																"href" : "/manual/administrator/ae3-daemon-process/admin-exit-codes/",
+																"icon" : "pictures",
+																"submenu" : [
+																		{
+																			"title" : "Manuals: AE3 Exit Codes",
+																			"access" : "public",
+																			"href" : "/manual/administrator/ae3-daemon-process/admin-exit-codes/index",
+																			"icon" : "help"
+																		},
+																		{
+																			"title" : "Exit Code 0 - success, normal shutdown",
+																			"access" : "public",
+																			"href" : "/manual/administrator/ae3-daemon-process/admin-exit-codes/admin-exit-code-0/",
+																			"icon" : "book_next"
+																		} ]
+															} ]
+												} ]
+									},
+									{
+										"title" : "Group: developer",
+										"access" : "public",
+										"href" : "/manual/developer/",
+										"icon" : "pictures",
+										"submenu" : [
+												{
+													"title" : "Manuals: Group: developer",
+													"access" : "public",
+													"href" : "/manual/developer/index",
+													"icon" : "help"
+												},
+												{
+													"title" : "AE3-INFO: developer",
+													"access" : "public",
+													"href" : "/!/skin/skin-ae3-info/developer.htm",
+													"icon" : "link_go"
+												},
+												{
+													"title" : "AE3 Quick Reference",
+													"access" : "public",
+													"href" : "/!/public/resources/lib/ru.myx.ae3.manual/QuickReference.xml",
+													"icon" : "link_go"
+												},
+												{
+													"title" : "Context Global Objects",
+													"access" : "public",
+													"href" : "/manual/developer/developer-ae3.globals/",
+													"icon" : "book_next"
+												},
+												{
+													"title" : "Core AE3 Types (Classes)",
+													"access" : "public",
+													"href" : "/manual/developer/developer-ae3.types/",
+													"icon" : "book_next"
+												},
+												{
+													"title" : "Core AE3 Packages",
+													"access" : "public",
+													"href" : "/manual/developer/developer-pkg.ae3/",
+													"icon" : "pictures",
+													"submenu" : [
+															{
+																"title" : "Manuals: Core AE3 Packages",
+																"access" : "public",
+																"href" : "/manual/developer/developer-pkg.ae3/index",
+																"icon" : "help"
+															},
+															{
+																"title" : "ae3.base Package Reference",
+																"access" : "public",
+																"href" : "/manual/developer/developer-pkg.ae3/doc-pkg.ae3.base/",
+																"icon" : "book_next"
+															},
+															{
+																"title" : "ae3.pdf Package Reference",
+																"access" : "public",
+																"href" : "/manual/developer/developer-pkg.ae3/doc-pkg.ae3.pdf/",
+																"icon" : "book_next"
+															},
+															{
+																"title" : "ae3.vfs Package Reference",
+																"access" : "public",
+																"href" : "/manual/developer/developer-pkg.ae3/doc-pkg.ae3.vfs/",
+																"icon" : "book_next"
+															},
+															{
+																"title" : "ae3.xls Package Reference",
+																"access" : "public",
+																"href" : "/manual/developer/developer-pkg.ae3/doc-pkg.ae3.xls/",
+																"icon" : "book_next"
+															} ]
+												},
+												{
+													"title" : "howto: make a package",
+													"access" : "public",
+													"href" : "/!/skin/skin-ae3-info/ae3/howto-packaging.htm",
+													"icon" : "link_go"
+												},
+												{
+													"title" : "Language: ACM.TPL",
+													"access" : "public",
+													"href" : "/!/skin/skin-ae3.impl.language.tpl/language-acm.tpl.html",
+													"icon" : "link_go"
+												},
+												{
+													"title" : "Skin Standard HTML",
+													"access" : "public",
+													"href" : "/!/skin/skin-standard-html/skin-standard-html.html",
+													"icon" : "link_go"
+												},
+												{
+													"title" : "Skin Standard XML",
+													"access" : "public",
+													"href" : "/!/skin/skin-standard-xml/skin-standard-xml.xml",
+													"icon" : "link_go"
+												} ]
+									},
+									{
+										"title" : "Group: example",
+										"access" : "public",
+										"href" : "/manual/example/",
+										"icon" : "pictures",
+										"submenu" : [
+												{
+													"title" : "Manuals: Group: example",
+													"access" : "public",
+													"href" : "/manual/example/index",
+													"icon" : "help"
+												},
+												{
+													"title" : "Hello World",
+													"access" : "public",
+													"href" : "/manual/example/example-hello-world/",
+													"icon" : "book_next"
+												} ]
+									},
+									{
+										"title" : "Group: internals",
+										"access" : "public",
+										"href" : "/manual/internals/",
+										"icon" : "pictures",
+										"submenu" : [
+												{
+													"title" : "Manuals: Group: internals",
+													"access" : "public",
+													"href" : "/manual/internals/index",
+													"icon" : "help"
+												},
+												{
+													"title" : "AE3-VM-VLIW Info",
+													"access" : "public",
+													"href" : "/developer/vm-vliw/",
+													"icon" : "link_go"
+												},
+												{
+													"title" : "S4-LCL-BDBJE (BerkleyDB Java Edition Driver for S4 Local) Info",
+													"access" : "public",
+													"href" : "/manual/internals/s4lcl-bdbje-info/",
+													"icon" : "book_next"
+												} ]
+									} ]
+						},
+						{
+							"title" : "Developer",
+							"access" : "public",
+							"href" : "/developer/",
+							"icon" : "user_red",
+							"submenu" : [
+									{
+										"title" : "Developer Pages",
+										"access" : "public",
+										"href" : "/developer/index",
+										"icon" : "house"
+									},
+									{
+										"title" : "Nice Error",
+										"access" : "public",
+										"href" : "/developer/error",
+										"icon" : "stop"
+									},
+									{
+										"title" : "Nice Exception",
+										"access" : "public",
+										"href" : "/developer/exception",
+										"icon" : "exclamation"
+									},
+									{
+										"title" : "Authenticate",
+										"access" : "public",
+										"href" : "/developer/authenticate",
+										"icon" : "key"
+									},
+									{
+										"title" : "Authentication Failed",
+										"access" : "public",
+										"href" : "/developer/authenticationFailed",
+										"icon" : "key_delete"
+									},
+									{
+										"title" : "Authentication Success",
+										"access" : "public",
+										"href" : "/developer/authenticationSuccess",
+										"icon" : "key_go"
+									},
+									{
+										"title" : "Access Denied",
+										"access" : "public",
+										"href" : "/developer/denied",
+										"icon" : "delete"
+									},
+									{
+										"title" : "Date",
+										"access" : "public",
+										"href" : "/developer/date",
+										"icon" : "clock"
+									},
+									{
+										"title" : "Other Places",
+										"access" : "public",
+										"href" : "/developer/other",
+										"icon" : "bullet_go",
+										"submenu" : [
+												{
+													"title" : "Skin: AE3 Info",
+													"access" : "public",
+													"href" : "/!/skin/skin-ae3-info/",
+													"icon" : "bullet_go",
+													"submenu" : [
+															{
+																"title" : "AE3: Quick Reference (coding examples)",
+																"access" : "public",
+																"href" : "/!/public/resources/lib/ru.myx.ae3.manual/QuickReference.xml",
+																"icon" : "help"
+															},
+															{
+																"title" : "Layout Render's Introduction / Example",
+																"access" : "public",
+																"href" : "/!/skin/skin-ae3-info/layouts.jsld",
+																"icon" : "layout_content"
+															},
+															{
+																"title" : "FamFamFam Silk Icon Set: Preview and License",
+																"access" : "public",
+																"href" : "/__i/famfamfam.com/silk/readme.html",
+																"icon" : "world_edit"
+															} ]
+												},
+												{
+													"title" : "Skin: JS Client",
+													"access" : "public",
+													"href" : "/!/skin/skin-jsclient/",
+													"icon" : "bullet_go",
+													"submenu" : [ {
+														"title" : "Skin: JS Client: Unicode Character Browser",
+														"access" : "public",
+														"href" : "/!/skin/skin-jsclient/test/lib/charcode.html",
+														"icon" : "table_multiple"
+													} ]
+												},
+												{
+													"title" : "Skin: Standard HTML",
+													"access" : "public",
+													"href" : "/!/skin/skin-standard-html/",
+													"icon" : "bullet_go"
+												},
+												{
+													"title" : "Skin: Standard XML",
+													"access" : "public",
+													"href" : "/!/skin/skin-standard-xml/",
+													"icon" : "bullet_go"
+												},
+												{
+													"title" : "Skin: Developer Tools",
+													"access" : "public",
+													"href" : "/!/skin/skin-developer-tools/",
+													"icon" : "bullet_go",
+													"submenu" : [
+															{
+																"title" : "Try-It-Yourself Browser's keyboard event properties",
+																"access" : "public",
+																"href" : "/!/skin/skin-developer-tools/client-js/try-key-events.htm",
+																"icon" : "keyboard_magnify"
+															},
+															{
+																"title" : "Format Text as JS String",
+																"access" : "public",
+																"href" : "/!/skin/skin-developer-tools/try-formatJsString.htm",
+																"icon" : "page_white_gear"
+															},
+															{
+																"title" : "Format Text as (UTF8) Base64",
+																"access" : "public",
+																"href" : "/!/skin/skin-developer-tools/try-formatStringAsUtf8Base64.htm",
+																"icon" : "page_white_gear"
+															} ]
+												} ]
+									},
+									{
+										"title" : "AE3 VLIW VM Detail",
+										"access" : "public",
+										"href" : "/developer/vm-vliw/",
+										"icon" : "cog",
+										"submenu" : [
+												{
+													"title" : "AE3 VLIW VM Detail",
+													"access" : "public",
+													"href" : "/developer/vm-vliw/index",
+													"icon" : "house"
+												},
+												{
+													"title" : "Processing Operations",
+													"access" : "public",
+													"href" : "/developer/vm-vliw/operations",
+													"icon" : "help"
+												},
+												{
+													"title" : "Operation Argument Specifiers",
+													"access" : "public",
+													"href" : "/developer/vm-vliw/arguments",
+													"icon" : "help",
+													"preview" : {
+														"depthLimit" : 1,
+														"variant" : "document-url",
+														"src" : "arguments?type=all"
+													}
+												},
+												{
+													"title" : "Instruction Store Targets",
+													"access" : "public",
+													"href" : "/developer/vm-vliw/stores",
+													"icon" : "folder_key",
+													"preview" : {
+														"depthLimit" : 1,
+														"variant" : "document-url",
+														"src" : "stores?type=all"
+													}
+												},
+												{
+													"title" : "Execution Result States",
+													"access" : "public",
+													"href" : "/developer/vm-vliw/results",
+													"icon" : "help",
+													"preview" : {
+														"depthLimit" : 1,
+														"variant" : "document-url",
+														"src" : "results?type=all"
+													}
+												},
+												{
+													"title" : "AE3 Byte Code Preview, try-it-yourself demo",
+													"access" : "public",
+													"href" : "/!/skin/skin-developer-tools/try-ae3.bytecode.htm",
+													"icon" : "bullet_go"
+												} ]
+									} ]
+						} ]
+			} ];
+</script>
+</head>
+<body />
+</html>

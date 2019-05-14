@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../skin/skin-standard-xml/show.xsl" href2="/!/skin/skin-standard-xml/show.xsl"?>
+<form layout="form"
+	title="NDSS::ndns/tunnelDial (Request TCP Tunnel from Device)"
+	baseURI="http://ae3.kimsufi.meloscope.co.nz/!/test/test.xml"
+	>
+	<client geo="SE" ip="90.139.94.153" format="xml" id="ndm-myx"
+		date="2019-05-11T12:52:32.075Z" standalone="false" 
+		develRoot="../skin" webRoot="http://ae3.kimsufi.meloscope.co.nz">
+		<menu src="../other/root-menu-source.html" />
+	</client>
+	<fields>
+		<field name="serviceName" title="Service Name" value=""
+			hint="Share name, like: my-pc, routerconfig, qnap, bathroom-thermometer, etc..." />
+		<field name="v" type="select" variant="edit" value="0"
+			zoom="document">
+			<options value="1" title="Identify CPE by License Number">
+				<fields>
+					<field name="license" title="License" required="false"
+						value="" />
+				</fields>
+			</options>
+			<options value="2" title="Identify CPE by PublicDNS Name">
+				<fields>
+					<field name="ndnsName" title="PublicDNS Name"
+						required="false" value="" />
+					<field name="ndnsZone" title="PublicDNS Zone" type="select"
+						variant="radio" value="" required="false">
+						<options value="musicafe.ru" title="musicafe.ru" />
+						<options value="test-temp.xz" title="test-temp.xz" />
+					</field>
+				</fields>
+			</options>
+			<options value="3" title="Identify CPE by Token Alias">
+				<fields>
+					<field name="alias" title="Token Alias" required="false"
+						value=""
+						hint="The base16 (hexadecimal) encoded form, 16 bytes, 32 characters." />
+				</fields>
+			</options>
+		</field>
+		<field name="endpointType" type="select" variant="edit"
+			value="default" zoom="document">
+			<options value="default"
+				title="Switch Protocol and Connect to TLS / HTTP as Reply">
+				<fields />
+			</options>
+			<options value="proxy"
+				title="Proxy HTTP Request over TLS Tunnel">
+				<fields />
+			</options>
+			<options value="proxy-s"
+				title="Proxy HTTPS Request over RAW Tunnel">
+				<fields />
+			</options>
+			<options value="connect"
+				title="Connect to Remote Target and return Success State as Reply">
+				<fields>
+					<field name="targetAddress" title="Target Address" value=""
+						hint="The address of the server that will accept the incoming tunnel on the caller side." />
+					<field name="targetPort" title="Target Port" type="number"
+						variant="integer" value=""
+						hint="The port of the server that will accept the incoming tunnel on the caller side." />
+					<field name="targetPath" title="Target Path"
+						hint="The path (without leading &#39;/&#39;) to be used in handshake. Used to identify the tunnel termination service on the caller side."
+						value="" />
+					<field name="sessionToken" title="Session Token"
+						type="string"
+						hint="The base16 (hexadecimal) encoded form, 16 bytes, 32 characters. Used to identify the incoming tunnel on the caller side."
+						value="" />
+					<field name="exampleToken" title="Example Token"
+						type="constant" cssClass="code"
+						value="0b175c6e71c9d47680759c78cbb2b90a" />
+					<field name="tunnelType" title="Tunnel Type" type="select"
+						hint="Specifies the type of CPE-2-ND*S part of the tunnel and protocols of end-points. Numeric value is the equvalent of target TCP port on the CPE side."
+						value="443">
+						<options value="80"
+							title="HTTP Endpoint / Secure TLS Tunnel (80)" />
+						<options value="443"
+							title="HTTPS Endpoint / Plain RAW Tunnel (443)" />
+						<options title="" />
+						<options value="65080"
+							title="HTTP Endpoint / Secure TLS Tunnel (65080)" />
+						<options value="8090"
+							title="HTTP Endpoint / Secure TLS Tunnel (8090)" />
+						<options value="8080"
+							title="HTTP Endpoint / Secure TLS Tunnel (8080)" />
+						<options value="5080"
+							title="HTTP Endpoint / Secure TLS Tunnel (5080)" />
+						<options title="" />
+						<options value="65083"
+							title="HTTPS Endpoint / Plain RAW Tunnel (65083)" />
+						<options value="8443"
+							title="HTTPS Endpoint / Plain RAW Tunnel (8443)" />
+						<options value="8083"
+							title="HTTPS Endpoint / Plain RAW Tunnel (8083)" />
+						<options value="5443"
+							title="HTTPS Endpoint / Plain RAW Tunnel (5443)" />
+						<options value="5083"
+							title="HTTPS Endpoint / Plain RAW Tunnel (5083)" />
+					</field>
+				</fields>
+			</options>
+		</field>
+		<field name="loggingDetail" id="loggingDetail"
+			title="Logging Detail" type="select" variant="select"
+			default="normal" value="normal">
+			<option title="none - No Detail" value="none" />
+			<option title="less - Less Detail" value="less" />
+			<option title="norm - Normal Detail" value="normal" />
+			<option title="more - More Detail" value="more" />
+			<option title="full - Full Detail" value="full" />
+		</field>
+		<submit icon="disconnect" title="Dial Tunnel..." />
+		<help src="/documentation#ndns/tunnelDial" />
+	</fields>
+	<values></values>
+</form>

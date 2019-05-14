@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../skin/skin-standard-xml/show.xsl" href2="/!/skin/skin-standard-xml/show.xsl"?>
+<list layout="list"
+	title="NDSS::ndns/listSatellites (NDNS Satellite Server List)"
+	cssId="list"
+	baseURI="http://ae3.kimsufi.meloscope.co.nz/!/test/test.xml"
+	>
+	<client geo="SE" ip="90.139.94.153" format="xml" id="ndm-myx"
+		date="2019-05-11T12:56:02.314Z" standalone="false"
+		develRoot="../skin" webRoot="http://ae3.kimsufi.meloscope.co.nz">
+		<menu src="../other/root-menu-source.html" />
+	</client>
+	<prefix layout="form" title="Query Parameters" zoom="row"
+		cssClass="ui-secondary">
+		<fields>
+			<field name="loggingDetail" id="loggingDetail"
+				title="Logging Detail" type="select" variant="select"
+				default="normal" value="normal">
+				<options title="none - No Detail" value="none" />
+				<options title="less - Less Detail" value="less" />
+				<options title="norm - Normal Detail" value="normal" />
+				<options title="more - More Detail" value="more" />
+				<options title="full - Full Detail" value="full" />
+			</field>
+			<field id="filter" name="filter" title="List Contents"
+				type="select" variant="select">
+				<option value="ndns" icon="server" titleShort="NDNS"
+					title="NDNS Satellite Servers" />
+				<option value="ndss" icon="server" titleShort="NDSS"
+					title="NDSS Partner Servers" />
+				<option value="all" icon="star" titleShort="ALL"
+					title="All UDP/UHP Servers available" />
+			</field>
+			<field id="level" name="level" title="State Detail"
+				type="select" variant="select">
+				<option value="last" title="Last Cached" />
+				<option value="current" title="Current Values" />
+				<option value="127" title="Complete External" />
+			</field>
+			<submit icon="application_put" title="Apply Query Parameters" />
+		</fields>
+		<filter>all</filter>
+		<level>last</level>
+	</prefix>
+	<columns>
+		<column id="name" title="Host Name" type="string"
+			variant="link" prefix="https://" icon="world_go" />
+		<column id="type" title="Type" type="select" variant="select">
+			<option value="ndns" icon="server_connect" titleShort="NDNS"
+				title="NDNS Satellite Server" />
+			<option value="ndss" icon="server_chart" titleShort="NDSS"
+				title="NDSS Server Node" />
+			<option value="local" icon="database_gear" titleShort="Local"
+				title="Local NDSS Server" />
+		</column>
+		<column id="address" title="Address" type="string"
+			variant="split-list" separator="," />
+		<column name="session" id="session" title="UDP Status"
+			type="constant" variant="select">
+			<option icon="exclamation" value="error" title="Error" />
+			<option icon="cancel" value="disabled" title="Disabled" />
+			<option icon="time_go" value="inactive" title="Inactive" />
+			<option icon="link_edit" value="enabled" title="Enabled" />
+			<option icon="hourglass_link" value="search" title="Search" />
+			<option icon="link_go" value="active" title="Active" />
+			<option icon="anchor" value="local" title="Local" />
+		</column>
+		<column id="balancing" title="Balancing" type="layout"
+			variant="layout" />
+		<column id="status" title="Service Status" type="layout"
+			variant="layout" />
+		<command title="View Server Tokens" icon="script_gear"
+			prefix="updateToken?mode=get-token&amp;back=listSatellites&amp;satellite="
+			field="key" />
+	</columns>
+	<item hl="error" type="ndss" name="macmyx.local"
+		address="sunnydale.myx.ru" session="enabled" status="off-line"
+		ui-state="level=127&amp;mode=readNdssState&amp;ndss=macmyx.local" />
+	<item hl="false" type="ndns" key="ndns-h2.ndm9.xyz"
+		name="ndns-h2.ndm9.xyz"
+		address="88.198.177.102, 2a01:4f8:d1:1d00::102" enabled="true"
+		session="active"
+		ui-state="level=127&amp;mode=readNdnsState&amp;satellite=ndns-h2.ndm9.xyz">
+		<status layout="view">
+			<fields>
+				<field name="version" title="Version" />
+				<field name="uptime" title="Uptime" cssClass="hl-NORMAL"
+					variant="period" scale="1000" />
+				<field name="cpuLoad" title="CPU (Load)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="ramUsed" title="RAM (Used)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="hddUsed" title="HDD (Used)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="cpeSessionCount" title="CPE Sessions"
+					variant="integer" />
+				<field name="ndssSessionCount" title="NDSS Sessions"
+					cssClass="hl-NORMAL" variant="integer" />
+				<field name="ndssServerCount" title="NDSS Servers"
+					variant="integer" />
+				<field name="ndssServiceCount" title="NDSS Services"
+					variant="integer" />
+			</fields>
+			<values serial="228451" level="127" level0="true" major="0"
+				minor="247" version="0.247" uptime="161779" level1="true"
+				cpuLoad="0.352" ramUsed="0.14" hddUsed="0.544" level2="true"
+				eventCount="211536720" refuseCount="42147180" complexCount="198416"
+				errorCount="16" cpeSessionCount="22365" ndssSessionCount="5"
+				ndssServerCount="5" ndssServiceCount="2" key="ndns-h2.ndm9.xyz">
+				<server key="ndns-h2.ndm9.xyz" name="ndns-h2.ndm9.xyz"
+					closing="false" address="88.198.177.102"
+					address6="2a01:4f8:d1:1d00::102" secret="xr7w27bbSwfi916"
+					currentTarget="13009.1" currentDelay="0.7191811885526285"
+					currentDrop="0" />
+				<delay baselineShift="0" loadMultiply="1" />
+			</values>
+		</status>
+		<balancing layout="view">
+			<values baselineShift="0" loadMultiply="1"
+				delay="0.7191811885526285" closing="false" limit="13009.1" />
+			<fields>
+				<field id="delay" name="delay" titleShort="Delay"
+					title="Dynamic Delay" type="number" variant="period" scale="1250"
+					cssClass="hl-bn-attention"
+					hint2="actual max: 100% is 250 steps of 5ms delays" />
+				<field id="closing" name="closing" titleShort="Stop"
+					title="Stopping" type="boolean" variant="boolean"
+					cssClass="hl-NORMAL" />
+				<field id="limit" name="limit" titleShort="Limit"
+					title="Soft Limit" type="number" variant="integer"
+					cssClass="hl-COLD" />
+				<field id="baselineShift" name="baselineShift"
+					titleShort="+ delay" title="Static Delay" type="number"
+					variant="period" scale="1250" cssClass="hl-bn-inactive" />
+				<field id="loadMultiply" name="loadMultiply"
+					titleShort="* CPEs" title="Multiply Sessions" type="number"
+					variant="decimal" cssClass="hl-bn-inactive" />
+			</fields>
+		</balancing>
+	</item>
+	<item hl="false" type="ndns" key="ndns-hz.ndm9.xyz"
+		name="ndns-hz.ndm9.xyz"
+		address="88.198.177.107, 2a01:4f8:d1:1d00::107" enabled="true"
+		session="active"
+		ui-state="level=127&amp;mode=readNdnsState&amp;satellite=ndns-hz.ndm9.xyz">
+		<status layout="view">
+			<fields>
+				<field name="version" title="Version" />
+				<field name="uptime" title="Uptime" cssClass="hl-NORMAL"
+					variant="period" scale="1000" />
+				<field name="cpuLoad" title="CPU (Load)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="ramUsed" title="RAM (Used)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="hddUsed" title="HDD (Used)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="cpeSessionCount" title="CPE Sessions"
+					variant="integer" />
+				<field name="ndssSessionCount" title="NDSS Sessions"
+					cssClass="hl-NORMAL" variant="integer" />
+				<field name="ndssServerCount" title="NDSS Servers"
+					variant="integer" />
+				<field name="ndssServiceCount" title="NDSS Services"
+					variant="integer" />
+			</fields>
+			<values serial="228442" level="127" level0="true" major="0"
+				minor="247" version="0.247" uptime="161788" level1="true"
+				cpuLoad="0.128" ramUsed="0.144" hddUsed="0.24" level2="true"
+				eventCount="133683" refuseCount="7379" complexCount="5041"
+				errorCount="15" cpeSessionCount="4" ndssSessionCount="2"
+				ndssServerCount="2" ndssServiceCount="1" key="ndns-hz.ndm9.xyz">
+				<server key="ndns-hz.ndm9.xyz" name="ndns-hz.ndm9.xyz"
+					closing="false" address="88.198.177.107"
+					address6="2a01:4f8:d1:1d00::107" secret="ag3BCc1Zp73g493"
+					currentTarget="13009.1" currentDelay="0" currentDrop="0" />
+				<delay baselineShift="0" loadMultiply="1" />
+			</values>
+		</status>
+		<balancing layout="view">
+			<values baselineShift="0" loadMultiply="1" delay="0"
+				closing="false" limit="13009.1" />
+			<fields>
+				<field id="delay" name="delay" titleShort="Delay"
+					title="Dynamic Delay" type="number" variant="period" scale="1250"
+					cssClass="hl-NORMAL"
+					hint2="actual max: 100% is 250 steps of 5ms delays" />
+				<field id="closing" name="closing" titleShort="Stop"
+					title="Stopping" type="boolean" variant="boolean"
+					cssClass="hl-NORMAL" />
+				<field id="limit" name="limit" titleShort="Limit"
+					title="Soft Limit" type="number" variant="integer"
+					cssClass="hl-COLD" />
+				<field id="baselineShift" name="baselineShift"
+					titleShort="+ delay" title="Static Delay" type="number"
+					variant="period" scale="1250" cssClass="hl-bn-inactive" />
+				<field id="loadMultiply" name="loadMultiply"
+					titleShort="* CPEs" title="Multiply Sessions" type="number"
+					variant="decimal" cssClass="hl-bn-inactive" />
+			</fields>
+		</balancing>
+	</item>
+	<item hl="false" type="ndns" key="ndns-o1.ndm9.xyz"
+		name="ndns-o1.ndm9.xyz"
+		address="46.105.148.93, 2001:41d0:1008:c7f::11" enabled="true"
+		session="active"
+		ui-state="level=127&amp;mode=readNdnsState&amp;satellite=ndns-o1.ndm9.xyz">
+		<status layout="view">
+			<fields>
+				<field name="version" title="Version" />
+				<field name="uptime" title="Uptime" cssClass="hl-NORMAL"
+					variant="period" scale="1000" />
+				<field name="cpuLoad" title="CPU (Load)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="ramUsed" title="RAM (Used)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="hddUsed" title="HDD (Used)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="cpeSessionCount" title="CPE Sessions"
+					variant="integer" />
+				<field name="ndssSessionCount" title="NDSS Sessions"
+					cssClass="hl-NORMAL" variant="integer" />
+				<field name="ndssServerCount" title="NDSS Servers"
+					variant="integer" />
+				<field name="ndssServiceCount" title="NDSS Services"
+					variant="integer" />
+			</fields>
+			<values serial="228505" level="127" level0="true" major="0"
+				minor="247" version="0.247" uptime="268093" level1="true"
+				cpuLoad="0.192" ramUsed="0.168" hddUsed="0.568" level2="true"
+				eventCount="353156768" refuseCount="70361448" complexCount="326297"
+				errorCount="4" cpeSessionCount="22273" ndssSessionCount="5"
+				ndssServerCount="5" ndssServiceCount="2" key="ndns-o1.ndm9.xyz">
+				<server key="ndns-o1.ndm9.xyz" name="ndns-o1.ndm9.xyz"
+					closing="false" address="46.105.148.93"
+					address6="2001:41d0:1008:c7f::11" secret="wfi916xr7w27bbS"
+					currentTarget="13009.1" currentDelay="0.7121092158565927"
+					currentDrop="0" />
+				<delay baselineShift="0" loadMultiply="1" />
+			</values>
+		</status>
+		<balancing layout="view">
+			<values baselineShift="0" loadMultiply="1"
+				delay="0.7121092158565927" closing="false" limit="13009.1" />
+			<fields>
+				<field id="delay" name="delay" titleShort="Delay"
+					title="Dynamic Delay" type="number" variant="period" scale="1250"
+					cssClass="hl-bn-attention"
+					hint2="actual max: 100% is 250 steps of 5ms delays" />
+				<field id="closing" name="closing" titleShort="Stop"
+					title="Stopping" type="boolean" variant="boolean"
+					cssClass="hl-NORMAL" />
+				<field id="limit" name="limit" titleShort="Limit"
+					title="Soft Limit" type="number" variant="integer"
+					cssClass="hl-COLD" />
+				<field id="baselineShift" name="baselineShift"
+					titleShort="+ delay" title="Static Delay" type="number"
+					variant="period" scale="1250" cssClass="hl-bn-inactive" />
+				<field id="loadMultiply" name="loadMultiply"
+					titleShort="* CPEs" title="Multiply Sessions" type="number"
+					variant="decimal" cssClass="hl-bn-inactive" />
+			</fields>
+		</balancing>
+	</item>
+	<item hl="false" type="ndns" key="ndns-r3.ndm9.xyz"
+		name="ndns-r3.ndm9.xyz" address="23.105.235.72, 2a05:93c2:24::72"
+		enabled="true" session="active"
+		ui-state="level=127&amp;mode=readNdnsState&amp;satellite=ndns-r3.ndm9.xyz">
+		<status layout="view">
+			<fields>
+				<field name="version" title="Version" />
+				<field name="uptime" title="Uptime" cssClass="hl-NORMAL"
+					variant="period" scale="1000" />
+				<field name="cpuLoad" title="CPU (Load)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="ramUsed" title="RAM (Used)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="hddUsed" title="HDD (Used)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="cpeSessionCount" title="CPE Sessions"
+					variant="integer" />
+				<field name="ndssSessionCount" title="NDSS Sessions"
+					cssClass="hl-NORMAL" variant="integer" />
+				<field name="ndssServerCount" title="NDSS Servers"
+					variant="integer" />
+				<field name="ndssServiceCount" title="NDSS Services"
+					variant="integer" />
+			</fields>
+			<values serial="228380" level="127" level0="true" major="0"
+				minor="247" version="0.247" uptime="161780" level1="true"
+				cpuLoad="0.112" ramUsed="0.12" hddUsed="0.4" level2="true"
+				eventCount="53579688" refuseCount="10555175" complexCount="198417"
+				errorCount="13" cpeSessionCount="5391" ndssSessionCount="5"
+				ndssServerCount="5" ndssServiceCount="2" key="ndns-r3.ndm9.xyz">
+				<server key="ndns-r3.ndm9.xyz" name="ndns-r3.ndm9.xyz"
+					closing="false" address="23.105.235.72" address6="2a05:93c2:24::72"
+					secret="wq6v17bbSwfi916" currentTarget="13009.1" currentDelay="0"
+					currentDrop="0" />
+				<delay baselineShift="0" loadMultiply="1" />
+			</values>
+		</status>
+		<balancing layout="view">
+			<values baselineShift="0" loadMultiply="1" delay="0"
+				closing="false" limit="13009.1" />
+			<fields>
+				<field id="delay" name="delay" titleShort="Delay"
+					title="Dynamic Delay" type="number" variant="period" scale="1250"
+					cssClass="hl-NORMAL"
+					hint2="actual max: 100% is 250 steps of 5ms delays" />
+				<field id="closing" name="closing" titleShort="Stop"
+					title="Stopping" type="boolean" variant="boolean"
+					cssClass="hl-NORMAL" />
+				<field id="limit" name="limit" titleShort="Limit"
+					title="Soft Limit" type="number" variant="integer"
+					cssClass="hl-COLD" />
+				<field id="baselineShift" name="baselineShift"
+					titleShort="+ delay" title="Static Delay" type="number"
+					variant="period" scale="1250" cssClass="hl-bn-inactive" />
+				<field id="loadMultiply" name="loadMultiply"
+					titleShort="* CPEs" title="Multiply Sessions" type="number"
+					variant="decimal" cssClass="hl-bn-inactive" />
+			</fields>
+		</balancing>
+	</item>
+	<item hl="false" type="ndns" key="ndns-rz.ndm9.xyz"
+		name="ndns-rz.ndm9.xyz" address="23.105.235.73, 2a05:93c2:24::73"
+		enabled="true" session="active"
+		ui-state="level=127&amp;mode=readNdnsState&amp;satellite=ndns-rz.ndm9.xyz">
+		<status layout="view">
+			<fields>
+				<field name="version" title="Version" />
+				<field name="uptime" title="Uptime" cssClass="hl-NORMAL"
+					variant="period" scale="1000" />
+				<field name="cpuLoad" title="CPU (Load)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="ramUsed" title="RAM (Used)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="hddUsed" title="HDD (Used)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="cpeSessionCount" title="CPE Sessions"
+					variant="integer" />
+				<field name="ndssSessionCount" title="NDSS Sessions"
+					cssClass="hl-NORMAL" variant="integer" />
+				<field name="ndssServerCount" title="NDSS Servers"
+					variant="integer" />
+				<field name="ndssServiceCount" title="NDSS Services"
+					variant="integer" />
+			</fields>
+			<values serial="228344" level="127" level0="true" major="0"
+				minor="247" version="0.247" uptime="161762" level1="true"
+				cpuLoad="0.14" ramUsed="0.128" hddUsed="0.2" level2="true"
+				eventCount="115252" refuseCount="3749" complexCount="5041"
+				errorCount="12" cpeSessionCount="2" ndssSessionCount="2"
+				ndssServerCount="2" ndssServiceCount="1" key="ndns-rz.ndm9.xyz">
+				<server key="ndns-rz.ndm9.xyz" name="ndns-rz.ndm9.xyz"
+					closing="false" address="23.105.235.73" address6="2a05:93c2:24::73"
+					secret="l9n5qlzbEq1z112" currentTarget="13009.1" currentDelay="0"
+					currentDrop="0" />
+				<delay baselineShift="0" loadMultiply="1" />
+			</values>
+		</status>
+		<balancing layout="view">
+			<values baselineShift="0" loadMultiply="1" delay="0"
+				closing="false" limit="13009.1" />
+			<fields>
+				<field id="delay" name="delay" titleShort="Delay"
+					title="Dynamic Delay" type="number" variant="period" scale="1250"
+					cssClass="hl-NORMAL"
+					hint2="actual max: 100% is 250 steps of 5ms delays" />
+				<field id="closing" name="closing" titleShort="Stop"
+					title="Stopping" type="boolean" variant="boolean"
+					cssClass="hl-NORMAL" />
+				<field id="limit" name="limit" titleShort="Limit"
+					title="Soft Limit" type="number" variant="integer"
+					cssClass="hl-COLD" />
+				<field id="baselineShift" name="baselineShift"
+					titleShort="+ delay" title="Static Delay" type="number"
+					variant="period" scale="1250" cssClass="hl-bn-inactive" />
+				<field id="loadMultiply" name="loadMultiply"
+					titleShort="* CPEs" title="Multiply Sessions" type="number"
+					variant="decimal" cssClass="hl-bn-inactive" />
+			</fields>
+		</balancing>
+	</item>
+	<item hl="true" type="ndss" name="ndss-hz.ndm9.xyz"
+		address="ndss-hz.ndm9.xyz" session="active"
+		ui-state="level=127&amp;mode=readNdssState&amp;ndss=ndss-hz.ndm9.xyz">
+		<status layout="view">
+			<fields>
+				<field name="version" title="Version" />
+				<field name="uptime" title="Uptime" cssClass="hl-NORMAL"
+					variant="period" scale="1000" />
+				<field name="cpuLoad" title="CPU (Load)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="ramUsed" title="RAM (Used)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="hddUsed" title="HDD (Used)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="cpeSessionCount" title="CPE Sessions"
+					variant="integer" />
+				<field name="ndssSessionCount" title="NDSS Sessions"
+					cssClass="hl-ERROR" variant="integer" />
+				<field name="ndssServerCount" title="NDSS Servers"
+					variant="integer" />
+				<field name="ndssServiceCount" title="NDSS Services"
+					variant="integer" />
+			</fields>
+			<values serial="146307" level="127" level0="true" major="5"
+				minor="679" version="5.679" uptime="760458" level1="true"
+				cpuLoad="0.428" ramUsed="0.768" hddUsed="0.432" level2="true"
+				eventCount="1298640" refuseCount="1208" complexCount="1155"
+				errorCount="0" cpeSessionCount="0" ndssSessionCount="6"
+				ndssServerCount="7" ndssServiceCount="1" />
+		</status>
+	</item>
+	<item hl="local" type="local" name="ndss-rz.ndm9.xyz"
+		address="ndss-rz.ndm9.xyz" session="local"
+		ui-state="level=127&amp;mode=readLocalState">
+		<status layout="view">
+			<fields>
+				<field name="version" title="Version" />
+				<field name="uptime" title="Uptime" cssClass="hl-NORMAL"
+					variant="period" scale="1000" />
+				<field name="cpuLoad" title="CPU (Load)" cssClass="hl-COLD"
+					variant="decimal" />
+				<field name="ramUsed" title="RAM (Used)"
+					cssClass="hl-ATTENTION" variant="decimal" />
+				<field name="hddUsed" title="HDD (Used)" cssClass="hl-NORMAL"
+					variant="decimal" />
+				<field name="cpeSessionCount" title="CPE Sessions"
+					variant="integer" />
+				<field name="ndssSessionCount" title="NDSS Sessions"
+					cssClass="hl-ERROR" variant="integer" />
+				<field name="ndssServerCount" title="NDSS Servers"
+					variant="integer" />
+				<field name="ndssServiceCount" title="NDSS Services"
+					variant="integer" />
+			</fields>
+			<values level="127" major="5" minor="679" version="5.679"
+				uptime="761761" cpuLoad="0.005" ramUsed="0.83271934725495"
+				hddUsed="0.35120344153960226" eventCount="1310947"
+				refuseCount="2257" complexCount="1812" errorCount="0"
+				cpeSessionCount="0" ndssSessionCount="6" ndssServerCount="7"
+				ndssServiceCount="1" />
+		</status>
+	</item>
+	<command title="Download" titleShort="" icon="images">
+		<group>
+			<command title="Download as XLS" icon="page_white_excel"
+				url="?___output=xls&amp;filter=all&amp;level=last" />
+			<command title="Download as PDF" icon="page_white_acrobat"
+				url="?___output=pdf&amp;filter=all&amp;level=last" />
+			<command title="Download as HTML" icon="page_world"
+				url="?___output=html&amp;filter=all&amp;level=last" />
+			<command title="Download as CSV" icon="page_white_text"
+				url="?___output=csv&amp;filter=all&amp;level=last" />
+			<command title="Open as Listing Page" icon="world_link"
+				url="?filter=all&amp;level=last" target="_blank" />
+		</group>
+	</command>
+	<help src="/documentation#ndns/listSatellites" />
+	<suffix layout="message" code="200"
+		message="Satellite status collected.">
+		<detail layout="list">
+			<columns>
+				<column id="type" title="Type" />
+				<column id="peer" title="Peer" />
+				<column id="detail" title="Detail" />
+				<column id="elapsed" title="Time" variant="period" scale="1" />
+			</columns>
+			<item elapsed="1"
+				origin="[TaskUdpSingle &quot;macmyx.local&quot; [MsgReadServiceState (level=127)] / finished]"
+				type="off-line" hl="error" peer="macmyx.local"
+				detail="Peer is off-line" />
+			<item elapsed="197"
+				origin="[TaskUdpSingle &quot;ndss-hz.ndm9.xyz&quot; [MsgReadServiceState (level=127)] / started]"
+				type="reply-final" peer="ndss-hz.ndm9.xyz"
+				detail="[MsgSatelliteStateInfo {&quot;serial&quot;:146307,&quot;level&quot;:127,&quot;level0&quot;:true,&quot;major&quot;:5,&quot;minor&quot;:679,&quot;version&quot;:&quot;5.679&quot;,&quot;uptime&quot;:760458,&quot;level1&quot;:true,&quot;cpuLoad&quot;:0.428,&quot;ramUsed&quot;:0.768,&quot;hddUsed&quot;:0.432,&quot;level2&quot;:true,&quot;eventCount&quot;:1298640,&quot;refuseCount&quot;:1208,&quot;complexCount&quot;:1155,&quot;errorCount&quot;:0,&quot;cpeSessionCount&quot;:0,&quot;ndssSessionCount&quot;:6,&quot;ndssServerCount&quot;:7,&quot;ndssServiceCount&quot;:1}]" />
+		</detail>
+	</suffix>
+</list>
