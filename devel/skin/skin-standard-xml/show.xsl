@@ -410,7 +410,6 @@
 		<xsl:param name="format" />
 		<xsl:param name="value" />
 		<xsl:param name="zoom" />
-		<xsl:param name="class" />
 		<xsl:if test="($format/@name or $format/@field) and $value and $format/@type='constant'">
 			<xsl:variable name="fieldName"><xsl:value-of select="$format/@field"/><xsl:value-of select="$format/@name[not($format/@field)]"/></xsl:variable>
 			<xsl:if test="$fieldName and $fieldName != '' and $fieldName != '.'">
@@ -879,10 +878,10 @@
 			</xsl:when>
 			<xsl:when test="$format/@variant='integer' and string(number($value))!='NaN'">
 				<xsl:variable name="number" select="number($value)"/>
-                <xsl:attribute name="data-type">
-                    <xsl:text>numeric</xsl:text>
-                </xsl:attribute>
-                <xsl:value-of select="format-number($number,'### ##0', 'decimal')" />
+				<xsl:attribute name="data-type">
+					<xsl:text>numeric</xsl:text>
+				</xsl:attribute>
+				<xsl:value-of select="format-number($number,'### ##0', 'decimal')" />
 			</xsl:when>
 			<xsl:when test="$format/@variant='price' and string(number($value))!='NaN'">
 				<xsl:variable name="number" select="number($value)"/>

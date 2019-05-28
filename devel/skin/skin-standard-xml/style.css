@@ -1097,9 +1097,7 @@ INPUT.el-radio + LABEL.st-radio-sel:active::before {
 	}
 }
 
-/* ----------------------------------------------------- components 2019 */
-
-/* a - atoms */
+/* ------------------------------------------- components 2019 */
 
 [data-type="numeric"] {
     white-space: nowrap;
