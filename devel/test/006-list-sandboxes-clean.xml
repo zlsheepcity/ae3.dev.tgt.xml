@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../skin/skin-standard-xml/show.xsl" href2="/!/skin/skin-standard-xml/show.xsl"?>
+<list layout="list"
+	title="NDLS::products/listSandboxes (List Firmware Sandboxes)">
+	<client geo="SE" ip="90.139.57.246" format="clean" id="zxv-myx"
+		date="2019-05-27T17:13:01.995Z" standalone="false"  
+		develRoot="../skin" webRoot="http://ae3.kimsufi.meloscope.co.nz"/>
+	<rawHeadData><![CDATA[<script type="text/javascript" language="javascript" src="/!/skin/skin-standard-html/$files/jquery-1.8.3.min.js"></script><script type="text/javascript" language="javascript" src="/resource/jquery.dataTables.min.js"></script><script type="text/javascript">$(document).ready(function() {var l = $('#list');l.dataTable({sDom:'<"tbar-up"fripl<"ui-clear">>t',bProcessing:true,bFilter:true,bLengthChange:false,bPaginate:false,bSort:true,});l.parent().parent().parent().parent().prepend(l.parent().children('.tbar-up'));} );</script><style>.dataTables_wrapper>.tbar-up{font-size: 90%;margin: 0;}.dataTables_wrapper>.tbar-up INPUT{font-size: 85%;line-height: 1em;padding: 0 0.2em;}.dataTables_processing, .dataTables_info, .dataTables_filter{display:inline-block;}.dataTables_info{float:right;}</style>]]></rawHeadData>
+	<columns>
+		<column id="id" title="Sandbox Name" type="string" />
+		<column id="version" title="FW Version" type="string" />
+		<column id="public" title="Listed as available to anyone"
+			titleShort="Public?"
+			hint="Given sand-box is listed as available to anyone or only for configured licenses?"
+			type="boolean" variant="select">
+			<option icon="user_green" value="true" title="YES" />
+			<option icon="user_red" value="false" title="NO" />
+		</column>
+		<column id="access" title="Can be requested by anyone"
+			titleShort="Selectable?"
+			hint="Given sand-box can be requested by anyone or only for configured licenses?"
+			type="boolean" variant="select">
+			<option icon="tick" value="true" title="YES" />
+			<option icon="lock_edit" value="false" title="NO" />
+		</column>
+		<command title="List Components" icon="application_view_list"
+			prefix="/products/listComponents?v=1&amp;" field="cprm" />
+		<command title="Make Custom Firmware..." icon="disk"
+			prefix="/products/makeFirmware?v=1&amp;" field="cprm" />
+	</columns>
+	<item hl="false" id="stable" version="2.15.C.4.0-1" public="true"
+		access="true"
+		cprm="productKey=zxv,sock;KN-7171-01RU;KN-7171&amp;sandbox=stable" />
+	<item hl="false" id="beta" version="3.00.B.0.0-0" public="true"
+		access="true"
+		cprm="productKey=zxv,sock;KN-7171-01RU;KN-7171&amp;sandbox=beta" />
+	<item hl="false" id="legacy" version="2.11.D.1.0-0" public="false"
+		access="true"
+		cprm="productKey=zxv,sock;KN-7171-01RU;KN-7171&amp;sandbox=legacy" />
+	<item hl="false" id="delta" version="2.15.C.4.0-1" public="false"
+		access="true"
+		cprm="productKey=zxv,sock;KN-7171-01RU;KN-7171&amp;sandbox=delta" />
+	<item hl="true" id="custom" version="2.15.C.4.0-1-11-23ae859"
+		public="false" access="false"
+		cprm="productKey=zxv,sock;KN-7171-01RU;KN-7171&amp;sandbox=custom" />
+	<item hl="true" id="gamma" version="2.15.C.4.0-1-12-080befb"
+		public="false" access="false"
+		cprm="productKey=zxv,sock;KN-7171-01RU;KN-7171&amp;sandbox=gamma" />
+	<item hl="false" id="draft" version="3.00.B.0.0-0" public="false"
+		access="true"
+		cprm="productKey=zxv,sock;KN-7171-01RU;KN-7171&amp;sandbox=draft" />
+	<item hl="true" id="alpha" version="3.00.B.0.0-0-39-10654fa"
+		public="false" access="false"
+		cprm="productKey=zxv,sock;KN-7171-01RU;KN-7171&amp;sandbox=alpha" />
+	<item hl="true" id="nightly" version="3.01.A.0.0-0-34-ea8bcbd"
+		public="false" access="false"
+		cprm="productKey=zxv,sock;KN-7171-01RU;KN-7171&amp;sandbox=nightly" />
+	<command title="Download" titleShort="" icon="images">
+		<group>
+			<command title="Download as XLS" icon="page_white_excel"
+				url="?___output=xls&amp;productKey=zxv%2csock%3bKN-7171-01RU%3bKN-7171" />
+			<command title="Download as PDF" icon="page_white_acrobat"
+				url="?___output=pdf&amp;productKey=zxv%2csock%3bKN-7171-01RU%3bKN-7171" />
+			<command title="Download as HTML" icon="page_world"
+				url="?___output=html&amp;productKey=zxv%2csock%3bKN-7171-01RU%3bKN-7171" />
+			<command title="Download as CSV" icon="page_white_text"
+				url="?___output=csv&amp;productKey=zxv%2csock%3bKN-7171-01RU%3bKN-7171" />
+			<command title="Open as Listing Page" icon="world_link"
+				url="?productKey=zxv%2csock%3bKN-7171-01RU%3bKN-7171"
+				target="_blank" />
+		</group>
+	</command>
+</list>

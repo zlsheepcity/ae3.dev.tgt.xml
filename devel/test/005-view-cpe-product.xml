@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../skin/skin-standard-xml/show.xsl" href2="/!/skin/skin-standard-xml/show.xsl"?>
+<product
+	title="NDLS::products/readProduct (Read Product Record)"
+	jumpUrl="/products/listProducts" jumpTitle="product list" layout="view">
+	<client geo="SE" ip="90.139.94.153" format="xml" id="zxv-myx"
+		date="2019-05-11T13:59:52.773Z" 
+		develRoot="../skin" webRoot="http://ae3.kimsufi.meloscope.co.nz">
+		<menu src="../other/root-menu-source.html" />
+	</client>
+	<fields>
+		<field name="productName" title="Product Name"
+			cssClass="hl-ui-title" />
+		<field name="." title="Brand" variant="view">
+			<fields>
+				<field name="issuerId" title="Issuer ID" />
+				<field name="vendorId" title="Vendor ID" />
+				<command icon="zoom" url="../brands/readBrand?key=zxv,sock"
+					title="View Brand" />
+			</fields>
+		</field>
+		<field name="lastModified" title="Last Modified" type="date"
+			variant="date" />
+		<field name="partNumber" title="Part Number" />
+		<field name="ndmHwId" title="NDM HW ID" />
+		<field name="stage" title="Product Stage" variant="select">
+			<option value="draft" icon="comment_edit"
+				title="Draft / Planned (not ready for manufacturing)" />
+			<option value="testing" icon="group_key"
+				title="Development / Testing ('test' or 'beta' orders only)" />
+			<option value="active" icon="cart_go"
+				title="Active / Current (any orders are OK)" />
+			<option value="archive" icon="lock_delete"
+				title="Archived / Discontinued (cannot place orders: End-Of-Life)" />
+		</field>
+		<field name="deviceType" title="Product Generation"
+			variant="select">
+			<option value="0" title="E0, Not NDM Systems License" />
+			<option value="1"
+				title="E1, NDM Systems License, not NDSS upgradable" />
+			<option value="2"
+				title="E2, NDM Systems License, NDSS upgradable" />
+			<option value="3"
+				title="E3, NDM Systems License, Web-API over SSL" />
+			<option value="4"
+				title="E4, NDM Systems License, Secure Authentication" />
+		</field>
+		<field name="ndmFwId" title="NDM FW ID" />
+		<field name="cookieString" title="Vendor's Cookie" />
+		<field name="ndssId" title="Default NDSS ID" />
+		<field name="macCount" title="MAC Count" />
+		<field name="imeiTacs" title="IMEI Tac" />
+		<field name="." title="CSV Export" variant="view">
+			<fields>
+				<field name="exportHeader" title="Header Mode"
+					variant="select">
+					<option value="" title="Plain CSV, no header" />
+					<option value="head" title="Plain CSV, plain header" />
+					<option value="head;"
+						title="Plain CSV, header starting with ';'" />
+					<option value="head#"
+						title="Plain CSV, header starting with '#'" />
+				</field>
+				<field name="exportColumnTitles" title="Column Titles" />
+				<field name="exportColumnFormat" title="Column Format" />
+				<field name="exportExample" title="Example" variant="rows"
+					cssClass="hscroll" itemCssClass="code"
+					hint="Note: This is an example only. It uses non-persistent, randomly generated values. These licenses and other parameters are not attached to any actual product and order." />
+			</fields>
+		</field>
+		<field name="productionLicensePrice"
+			title="Production License Price, $" variant="price">
+			<hint>
+				<b>USD</b>
+				, 'real / production' and 'more spares / service' licenses only.
+			</hint>
+		</field>
+		<field name="productionOvershipment"
+			title="Production Overshipment, %" variant="decimal">
+			<hint>
+				<b>Percentage</b>
+				, 'real / production' orders only.
+			</hint>
+		</field>
+		<field name="sandboxes" title="Build Sandboxes"
+			variant="document-url" />
+		<field name="track" title="Tracked Activity" variant="list"
+			elementName="event">
+			<columns>
+				<column id="date" title="Date" variant="date" />
+				<column id="command" title="Command" />
+				<column id="byUser" title="User" variant="username" />
+				<column id="byAddress" title="Address" variant="IP" />
+				<column id="byGeo" title="Geo" variant="geo" />
+				<command title="View Action Detail" icon="zoom_in"
+					prefix="../readAction?key=" field="key" />
+			</columns>
+		</field>
+		<field name="orders" title="Related Orders"
+			variant="document-url" />
+		<command icon="application_form_edit"
+			url="../products/updateProduct?key=zxv%2ckeen%3bKN-1010-01RU%3bKN-1010&amp;back=..%2fproducts%2freadProduct%3fback%3d%252fproducts%252flistProducts%26key%3dndm%252ckeen%253bKN-1010-01RU%253bKN-1010"
+			title="Edit" />
+		<command icon="cart_put"
+			url="../orders/prepareInitial?productId=zxv,sock;KN-1010-01RU;KN-1010"
+			title="Order" />
+		<help src="/documentation#products/readProduct" />
+	</fields>
+	<key>zxv,sock;KN-1010-01RU;KN-1010</key>
+	<issuerId>zxv</issuerId>
+	<vendorId>sock</vendorId>
+	<partNumber>KN-1010-01RU</partNumber>
+	<ndmHwId>KN-1010</ndmHwId>
+	<productName>Giga</productName>
+	<stage>active</stage>
+	<deviceType>4</deviceType>
+	<ndmFwId></ndmFwId>
+	<cookieString></cookieString>
+	<lastModified>2019-05-27T16:30:04.396Z</lastModified>
+	<ndssId>ndss.dev.ndm9.xyz</ndssId>
+	<macCount>2</macCount>
+	<imeiTacs>35752310333333/33333</imeiTacs>
+	<exportHeader>head</exportHeader>
+	<exportColumnTitles>servicetag,servicehost,servicepass,wlanssid,wlankey,wlanwps,country,ndmhwid,lanmac,wanmac,imei,ctrlsum
+	</exportColumnTitles>
+	<exportColumnFormat>${license},ndss.sock.ndmsystems.com,${service-key},Keenetic-${unum4},${upass},${upin8},RU,KN-1010,${mac0},${mac1},${imei},${hash-md5}
+	</exportColumnFormat>
+	<exportExample>
+		<header>servicetag,servicehost,servicepass,wlanssid,wlankey,wlanwps,country,ndmhwid,lanmac,wanmac,imei,ctrlsum
+		</header>
+		<string>214235933720036,ndss.sock.ndmsystems.com,66IrLoVkvhqp491,Keenetic-3176,mSjRjJEc,76137860,RU,KN-1010,11:ab:cd:00:00:00,11:ab:cd:00:00:01,35-752110-000000-3,7fa398f60d3adc2c3d214933ee40e398&#10;728192525921201,ndss.sock.ndmsystems.com,96sYWAh3Vl1x029,Keenetic-4386,ZivDh9Yh,11315032,RU,KN-1010,11:ab:cd:00:00:02,11:ab:cd:00:00:03,35-752110-000001-1,0dfefe2e25095ba48cd45a14c921ba3f&#10;949945998128501,ndss.sock.ndmsystems.com,2A9EbKugZw04991,Keenetic-6634,mVr37HFG,72686584,RU,KN-1010,11:ab:cd:00:00:04,11:ab:cd:00:00:05,35-752110-000002-9,dfd4bd5d91c270ef62872d6b1b7d8d8f&#10;161171897703454,ndss.sock.ndmsystems.com,yv1iruO0b49z405,Keenetic-0015,7Mv4Lxhb,36730667,RU,KN-1010,11:ab:cd:00:00:06,11:ab:cd:00:00:07,35-752110-000003-7,9441db31d4c9862946ef057295012cd8&#10;618944933981273,ndss.sock.ndmsystems.com,HanUPsAIPl3n270,Keenetic-9400,WY5h3AyX,80487036,RU,KN-1010,11:ab:cd:00:00:08,11:ab:cd:00:00:09,35-752110-000004-5,9ead491b640fb7076909e0e14356feff
+		</string>
+	</exportExample>
+	<productionLicensePrice>213.25</productionLicensePrice>
+	<productionOvershipment>1.000</productionOvershipment>
+	<track>
+		<event key="20190527-163004-00000"
+			date="2019-05-27T16:30:04.398Z" command="Products.editProduct"
+			byUser="zxv-myx" byAddress="90.139.57.246" byGeo="SE" />
+		<event key="20190527-143020-00000"
+			date="2019-05-27T14:30:20.659Z" command="Products.editProduct"
+			byUser="zxv-myx" byAddress="90.139.57.246" byGeo="SE" />
+		<event key="20190527-141726-00000"
+			date="2019-05-27T14:17:26.660Z" command="Products.editProduct"
+			byUser="zxv-myx" byAddress="90.139.57.246" byGeo="SE" />
+		<event key="20190527-141654-00000"
+			date="2019-05-27T14:16:54.951Z" command="Products.editProduct"
+			byUser="zxv-myx" byAddress="90.139.57.246" byGeo="SE" />
+		<event key="20190527-141633-00000"
+			date="2019-05-27T14:16:33.834Z" command="Products.editProduct"
+			byUser="zxv-myx" byAddress="90.139.57.246" byGeo="SE" />
+		<event key="20190527-134242-00000"
+			date="2019-05-27T13:42:42.414Z" command="Products.editProduct"
+			byUser="zxv-myx" byAddress="90.139.57.246" byGeo="SE" />
+		<event key="20180917-160236-00000"
+			date="2018-09-17T16:02:36.957Z" command="Products.editProduct"
+			byUser="sock" byAddress="138.201.236.110" byGeo="DE" />
+	</track>
+	<sandboxes
+		src="006-list-sandboxes-clean.xml" />
+	<orders
+		src="007-list-orders-clean.xml" />
+</product>

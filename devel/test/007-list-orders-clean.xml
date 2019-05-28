@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../skin/skin-standard-xml/show.xsl" href2="/!/skin/skin-standard-xml/show.xsl"?>
+<list layout="list" cssId="list"
+	title="NDLS::orders/listOrders (List Orders)"
+	server="ndls.dev.ndm9.xyz" jumpUrl="prepareInitial"
+	jumpTitle="prepare new order...">
+	<client geo="SE" ip="90.139.57.246" format="clean" id="zxv-myx"
+		date="2019-05-27T17:14:53.558Z" standalone="false"  
+		develRoot="../skin" webRoot="http://ae3.kimsufi.meloscope.co.nz" />
+	<rawHeadData><![CDATA[<script type="text/javascript" language="javascript" src="/!/skin/skin-standard-html/$files/jquery-1.8.3.min.js"></script><script type="text/javascript" language="javascript" src="/resource/jquery.dataTables.min.js"></script><script type="text/javascript">$(document).ready(function() {var l = $('#list');l.dataTable({sDom:'<"tbar-up"fripl<"ui-clear">>t',bProcessing:true,bFilter:true,bLengthChange:false,bPaginate:false,bSort:true,});l.parent().parent().parent().parent().prepend(l.parent().children('.tbar-up'));} );</script><style>.dataTables_wrapper>.tbar-up{font-size: 90%;margin: 0;}.dataTables_wrapper>.tbar-up INPUT{font-size: 85%;line-height: 1em;padding: 0 0.2em;}.dataTables_processing, .dataTables_info, .dataTables_filter{display:inline-block;}.dataTables_info{float:right;}</style>]]></rawHeadData>
+	<prefix layout="form" title="Query Parameters" zoom="row"
+		cssClass="ui-secondary">
+		<fields>
+			<field name="orderState" title="Order State" type="select">
+				<option value="" icon="star" title="Any State" />
+				<option value="pending" icon="hourglass" title="Pending" />
+				<option value="initial" icon="cart_put" title="Initial" />
+				<option value="complete" icon="book_key" title="Complete" />
+				<option value="invoiced" icon="money" title="Invoiced" />
+				<option value="approved" icon="thumb_up" title="Approved" />
+				<option value="working" icon="time" title="Working..." />
+				<option value="finished" icon="tick" title="Done." />
+			</field>
+			<submit icon="application_put" title="Apply Query Parameters" />
+		</fields>
+	</prefix>
+	<columns>
+		<column id="issuerId" title="Issuer ID" type="string"
+			variant="link" prefix="../orders/listOrders?authUserId="
+			icon="table_link" />
+		<column id="vendorId" title="Vendor ID" type="string"
+			variant="link" prefix="../orders/listOrders?authUserId="
+			icon="table_link" />
+		<column id="orderId" title="Order ID" type="string" />
+		<column id="orderState" title="State" type="string"
+			variant="select">
+			<option value="initial" icon="cart_put" title="Initial" />
+			<option value="complete" icon="book_key" title="Complete" />
+			<option value="invoiced" icon="money" title="Invoiced" />
+			<option value="approved" icon="thumb_up" title="Approved" />
+			<option value="working" icon="time" title="Working..." />
+			<option value="finished" icon="tick" title="Done." />
+		</column>
+		<column id="modified" title="Modified" type="date"
+			variant="date" />
+		<column id="itemCount" title="Items" type="number"
+			variant="integer" />
+		<column id="totalQuantity" title="Quantity, pcs" type="number"
+			variant="integer" />
+		<column id="priceTotal" title="Amount, $" type="number"
+			variant="price" />
+		<command title="View Order Detail" icon="zoom_in"
+			prefix="../orders/readOrder?key=" field="key" />
+		<command title="Decline..." icon="stop"
+			prefix="../orders/declineInvoice?key=" field="declineKey" />
+		<command title="Drop Order..." icon="cross"
+			prefix="../orders/dropOrder?key=" field="dropKey" />
+	</columns>
+	<item hl="true" key="zxv,sock;XO1800035" issuerId="zxv"
+		vendorId="sock" brandId="zxv,sock" orderId="XO1800035"
+		orderState="complete" modified="2018-09-26T15:01:16.000Z"
+		itemCount="1" quantityRequested="2000" quantity="NaN"
+		totalQuantity="2000" dropKey="zxv,sock;XO1800035" />
+	<item hl="true" key="zxv,sock;XO1810045" issuerId="zxv"
+		vendorId="sock" brandId="zxv,sock" orderId="XO1810045"
+		orderState="complete" modified="2018-09-25T13:27:01.000Z"
+		itemCount="1" quantityRequested="200" quantity="NaN"
+		totalQuantity="200" dropKey="zxv,sock;XO1810045" />
+	<item hl="true" key="zxv,sock;XO1810029" issuerId="zxv"
+		vendorId="sock" brandId="zxv,sock" orderId="XO1810029"
+		orderState="complete" modified="2018-09-20T13:05:53.000Z"
+		itemCount="1" quantityRequested="200" quantity="NaN"
+		totalQuantity="200" dropKey="zxv,sock;XO1810029" />
+	<item hl="true" key="zxv,sock;XO1810025" issuerId="zxv"
+		vendorId="sock" brandId="zxv,sock" orderId="XO1810025"
+		orderState="complete" modified="2018-09-20T12:56:13.000Z"
+		itemCount="1" quantityRequested="200" quantity="NaN"
+		totalQuantity="200" dropKey="zxv,sock;XO1810025" />
+	<item hl="true" key="zxv,sock;XO1810017" issuerId="zxv"
+		vendorId="sock" brandId="zxv,sock" orderId="XO1810017"
+		orderState="complete" modified="2018-09-18T12:12:44.000Z"
+		itemCount="1" quantityRequested="1000" quantity="NaN"
+		totalQuantity="1000" dropKey="zxv,sock;XO1810017" />
+	<item hl="true" key="zxv,sock;XO1810014" issuerId="zxv"
+		vendorId="sock" brandId="zxv,sock" orderId="XO1810014"
+		orderState="invoiced" modified="2018-09-18T11:31:03.000Z"
+		itemCount="1" quantityRequested="5133" quantity="5184"
+		totalQuantity="5184" priceTotal="68012.25"
+		declineKey="zxv,sock;XO1810014" />
+	<item hl="true" key="zxv,sock;XO1810016" issuerId="zxv"
+		vendorId="sock" brandId="zxv,sock" orderId="XO1810016"
+		orderState="initial" modified="2018-09-18T11:23:54.000Z" itemCount="1"
+		quantityRequested="2222" quantity="NaN" totalQuantity="2222"
+		dropKey="zxv,sock;XO1810016" />
+	<command title="Download" titleShort="" icon="images">
+		<group>
+			<command title="Download as XLS" icon="page_white_excel"
+				url="?___output=xls&amp;" />
+			<command title="Download as PDF" icon="page_white_acrobat"
+				url="?___output=pdf&amp;" />
+			<command title="Download as HTML" icon="page_world"
+				url="?___output=html&amp;" />
+			<command title="Download as CSV" icon="page_white_text"
+				url="?___output=csv&amp;" />
+			<command title="Open as Listing Page" icon="world_link"
+				url="?" target="_blank" />
+		</group>
+	</command>
+</list>
