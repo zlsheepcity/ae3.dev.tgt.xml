@@ -878,7 +878,10 @@
 			</xsl:when>
 			<xsl:when test="$format/@variant='integer' and string(number($value))!='NaN'">
 				<xsl:variable name="number" select="number($value)"/>
-				<xsl:value-of select="format-number($number,'### ##0', 'decimal')"/>
+				<xsl:attribute name="data-type">
+					<xsl:text>numeric</xsl:text>
+				</xsl:attribute>
+				<xsl:value-of select="format-number($number,'### ##0', 'decimal')" />
 			</xsl:when>
 			<xsl:when test="$format/@variant='price' and string(number($value))!='NaN'">
 				<xsl:variable name="number" select="number($value)"/>
