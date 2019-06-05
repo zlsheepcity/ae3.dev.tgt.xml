@@ -1097,10 +1097,8 @@ INPUT.el-radio + LABEL.st-radio-sel:active::before {
 	}
 }
 
-/* ------------------------------------------- components 2019 */
+/* contents data-type specific classes / components 2019 */
 
 [data-type="numeric"] {
     white-space: nowrap;
 }
-
-/* end of components */
