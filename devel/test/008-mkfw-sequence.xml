@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../skin/skin-standard-xml/show.xsl" href2="/!/skin/skin-standard-xml/show.xsl"?>
+<form layout="form"
+	title="NDSS::ndbs/makeFirmware (Make / Build Firmware)"
+	baseURI="http://ae3.kimsufi.meloscope.co.nz/!/test/test.xml"
+	>
+	<client geo="SE" ip="83.177.159.110" format="xml" id="bbw-myx"
+		date="2019-07-23T13:29:26.071Z" standalone="false">
+		<menu
+			src="/index?__auth=force&amp;__role=context-menu&amp;ref=%2fndbs%2fmakeFirmware" />
+	</client>
+	<fields>
+		<field name="v" type="select" variant="edit" value="0"
+			zoom="document">
+			<options value="1" title="Select Product From List">
+				<fields>
+					<field name="productKey" title="Product" required="false"
+						type="select" value="">
+						<options value="bbw,acme;zx-1011-01RU;zx-1011"
+							title="zz(DROP) (p/n: &quot;zx-1011-01RU&quot;, hwId: &quot;zx-1011&quot;)" />
+						<options value="bbw,acme;zx-1011-01UA;zx-1011"
+							title="zz(DROP) (p/n: &quot;zx-1011-01UA&quot;, hwId: &quot;zx-1011&quot;)" />
+						<options value="bbw,acme;zx-1011-xxUA;zx-1011"
+							title="zz(DROP) (p/n: &quot;zx-1011-xxUA&quot;, hwId: &quot;zx-1011&quot;)" />
+						<options value="bbw,acme;zx-1012-01RU;zx-1012"
+							title="zz(DROP) (p/n: &quot;zx-1012-01RU&quot;, hwId: &quot;zx-1012&quot;)" />
+						<options value="bbw,acme;zx-1012-01UA;zx-1012"
+							title="zz(DROP) (p/n: &quot;zx-1012-01UA&quot;, hwId: &quot;zx-1012&quot;)" />
+						<options value="bbw,acme;zx-1012-xxRU;zx-1012"
+							title="zz(DROP) (p/n: &quot;zx-1012-xxRU&quot;, hwId: &quot;zx-1012&quot;)" />
+						<options value="bbw,acme;zx-1012-xxUA;zx-1012"
+							title="zz(DROP) (p/n: &quot;zx-1012-xxUA&quot;, hwId: &quot;zx-1012&quot;)" />
+					</field>
+				</fields>
+			</options>
+			<options value="2"
+				title="Type in exact &quot;hwId&quot; value">
+				<fields>
+					<field name="hwId" title="NDM Hardware ID" required="false"
+						value="" />
+				</fields>
+			</options>
+			<options value="3" title="Find Product by License Number">
+				<fields>
+					<field name="--ui-user-auth" type="hidden" value="true" />
+					<field name="license" title="License" required="false"
+						value="" />
+				</fields>
+			</options>
+			<options value="0" title="The Alternative Way">
+				<fields>
+					<field type="constant" variant="sequence" elementName="span">
+						<sequence>
+							<span>Jump to &quot;</span>
+							<span layout="formatted" variant="link" href="/listProducts"
+								cssClass="ui-bold">
+								<default layout="formatted" variant="icon" icon="images" />
+								<default> Product List</default>
+							</span>
+							<span>&quot; or &quot;</span>
+							<span layout="formatted" variant="link"
+								href="/ndbs/listSetupLicenses" cssClass="ui-bold">
+								<default layout="formatted" variant="icon"
+									icon="user_edit" />
+								<default> Setup License List</default>
+							</span>
+							<span>&quot; and click on the </span>
+							<span layout="formatted" variant="icon" icon="disk" />
+							<span> icon in the product&#39;s row.</span>
+						</sequence>
+					</field>
+				</fields>
+			</options>
+		</field>
+		<submit icon="disk" title="Make Firmware..." />
+		<help src="/documentation#ndbs/makeFirmware" />
+	</fields>
+	<values></values>
+</form>
