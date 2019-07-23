@@ -6,7 +6,8 @@
 	<client geo="SE" ip="83.177.159.110" format="xml" id="bbw-myx"
 		date="2019-07-23T13:29:26.071Z" standalone="false">
 		<menu
-			src="/index?__auth=force&amp;__role=context-menu&amp;ref=%2fndbs%2fmakeFirmware" />
+			src="/index?__auth=force&amp;__role=context-menu&amp;ref=%2fndbs%2fmakeFirmware" 
+		/>
 	</client>
 	<fields>
 		<field name="v" type="select" variant="edit" value="0"
