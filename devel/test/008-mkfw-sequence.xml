@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../skin/skin-standard-xml/show.xsl" href2="/!/skin/skin-standard-xml/show.xsl"?>
+<form layout="form"
+	title="NDSS::ndbs/makeFirmware (Make / Build Firmware)"
+	baseURI="http://ae3.kimsufi.meloscope.co.nz/!/test/test.xml"
+	>
+	<client geo="SE" ip="83.177.159.110" format="xml" id="ndm-myx"
+		date="2019-07-23T13:29:26.071Z" standalone="false">
+		<menu
+			src="/index?__auth=force&amp;__role=context-menu&amp;ref=%2fndbs%2fmakeFirmware" />
+	</client>
+	<fields>
+		<field name="v" type="select" variant="edit" value="0"
+			zoom="document">
+			<options value="1" title="Select Product From List">
+				<fields>
+					<field name="productKey" title="Product" required="false"
+						type="select" value="">
+						<options value="ndm,zyxel;EMG1316;kn_rd"
+							title="RT-1W4L1USBn-test (p/n: &quot;EMG1316&quot;, hwId: &quot;kn_rd&quot;)" />
+						<options value="ndm,zyxel;none;udect_ra"
+							title="Keenetic Plus DECT Test (p/n: &quot;none&quot;, hwId: &quot;udect_ra&quot;)" />
+						<options value="ndm,keen;KN-1011;KN-1011"
+							title="zz(DROP) (p/n: &quot;KN-1011&quot;, hwId: &quot;KN-1011&quot;)" />
+						<options value="ndm,zyxel;KVB30D;udsl_ra"
+							title="Keenetic Plus DSL (p/n: &quot;KVB30D&quot;, hwId: &quot;udsl_ra&quot;)" />
+						<options value="ndm,mstc;34000-05BA;kl_ra"
+							title="Билайн N150L (p/n: &quot;34000-05BA&quot;, hwId: &quot;kl_ra&quot;)" />
+						<options value="ndm,mstc;14300-05BB;knv_ra"
+							title="Домолинк Freeport (p/n: &quot;14300-05BB&quot;, hwId: &quot;knv_ra&quot;)" />
+						<options value="ndm,mstc;14300-05E0;knv_ra"
+							title="Freeport (p/n: &quot;14300-05E0&quot;, hwId: &quot;knv_ra&quot;)" />
+						<options value="ndm,zyxel;34000-0671;kg_rb"
+							title="RT-1W4L1USBn (p/n: &quot;34000-0671&quot;, hwId: &quot;kg_rb&quot;)" />
+						<options value="ndm,zyxel;14300-0637;knv_rb"
+							title="RT-V4L1USBn (p/n: &quot;14300-0637&quot;, hwId: &quot;knv_rb&quot;)" />
+						<options value="ndm,zyxel;14300-06A7;knv_rb"
+							title=" RT-V1W4L2USBn (p/n: &quot;14300-06A7&quot;, hwId: &quot;knv_rb&quot;)" />
+						<options value="ndm,zyxel;34000-0685;kge_rb"
+							title="N150E5U1 (p/n: &quot;34000-0685&quot;, hwId: &quot;kge_rb&quot;)" />
+						<options value="ndm,zyxel;34000-06B5;kge_rb"
+							title="N150E5U1_Kievstar (p/n: &quot;34000-06B5&quot;, hwId: &quot;kge_rb&quot;)" />
+						<options value="ndm,zyxel;96101499;udect_ra"
+							title="Keenetic Plus DECT (p/n: &quot;96101499&quot;, hwId: &quot;udect_ra&quot;)" />
+						<options value="ndm,mstc;14300-0637-S;knv_ra"
+							title="Metanoia VDSL Gateway (p/n: &quot;14300-0637-S&quot;, hwId: &quot;knv_ra&quot;)" />
+						<options value="ndm,zyxel;EMG1800-T10A;ki_ra"
+							title="Keenetic Air (p/n: &quot;EMG1800-T10A&quot;, hwId: &quot;ki_ra&quot;)" />
+						<options value="ndm,zyxel;EMG1812-T10A;ki_rb"
+							title="Keenetic Extra II (p/n: &quot;EMG1812-T10A&quot;, hwId: &quot;ki_rb&quot;)" />
+						<options value="ndm,zyxel;EMG2885-T20A;ku_rd"
+							title="Keenetic Ultra II (p/n: &quot;EMG2885-T20A&quot;, hwId: &quot;ku_rd&quot;)" />
+						<options value="ndm,baudtec;14300-0637;knv_rb"
+							title="MN104R4H-2T2R VDSL (p/n: &quot;14300-0637&quot;, hwId: &quot;knv_rb&quot;)" />
+						<options value="ndm,keen;KN-1010-01EU;KN-1010"
+							title="Giga (EU) (p/n: &quot;KN-1010-01EU&quot;, hwId: &quot;KN-1010&quot;)" />
+						<options value="ndm,keen;KN-1010-01RU;KN-1010"
+							title="Giga (p/n: &quot;KN-1010-01RU&quot;, hwId: &quot;KN-1010&quot;)" />
+						<options value="ndm,keen;KN-1010-01TR;KN-1010"
+							title="Giga (TR) (p/n: &quot;KN-1010-01TR&quot;, hwId: &quot;KN-1010&quot;)" />
+						<options value="ndm,keen;KN-1011-01RU;KN-1011"
+							title="zz(DROP) (p/n: &quot;KN-1011-01RU&quot;, hwId: &quot;KN-1011&quot;)" />
+						<options value="ndm,keen;KN-1011-01UA;KN-1011"
+							title="zz(DROP) (p/n: &quot;KN-1011-01UA&quot;, hwId: &quot;KN-1011&quot;)" />
+						<options value="ndm,keen;KN-1011-xxUA;KN-1011"
+							title="zz(DROP) (p/n: &quot;KN-1011-xxUA&quot;, hwId: &quot;KN-1011&quot;)" />
+						<options value="ndm,keen;KN-1012-01RU;KN-1012"
+							title="zz(DROP) (p/n: &quot;KN-1012-01RU&quot;, hwId: &quot;KN-1012&quot;)" />
+						<options value="ndm,keen;KN-1012-01UA;KN-1012"
+							title="zz(DROP) (p/n: &quot;KN-1012-01UA&quot;, hwId: &quot;KN-1012&quot;)" />
+						<options value="ndm,keen;KN-1012-xxRU;KN-1012"
+							title="zz(DROP) (p/n: &quot;KN-1012-xxRU&quot;, hwId: &quot;KN-1012&quot;)" />
+						<options value="ndm,keen;KN-1012-xxUA;KN-1012"
+							title="zz(DROP) (p/n: &quot;KN-1012-xxUA&quot;, hwId: &quot;KN-1012&quot;)" />
+						<options value="ndm,keen;KN-1110-01EU;KN-1110"
+							title="Start (EU) (p/n: &quot;KN-1110-01EU&quot;, hwId: &quot;KN-1110&quot;)" />
+						<options value="ndm,keen;KN-1110-01RU;KN-1110"
+							title="Start (p/n: &quot;KN-1110-01RU&quot;, hwId: &quot;KN-1110&quot;)" />
+						<options value="ndm,keen;KN-1110-01TR;KN-1110"
+							title="Start (TR) (p/n: &quot;KN-1110-01TR&quot;, hwId: &quot;KN-1110&quot;)" />
+						<options value="ndm,keen;KN-1111-01RU;KN-1111"
+							title="Start (p/n: &quot;KN-1111-01RU&quot;, hwId: &quot;KN-1111&quot;)" />
+						<options value="ndm,keen;KN-1111-01TR;KN-1111"
+							title="Start (TR) (p/n: &quot;KN-1111-01TR&quot;, hwId: &quot;KN-1111&quot;)" />
+						<options value="ndm,keen;KN-1210-01EU;KN-1210"
+							title="4G (EU) (p/n: &quot;KN-1210-01EU&quot;, hwId: &quot;KN-1210&quot;)" />
+						<options value="ndm,keen;KN-1210-01RU;KN-1210"
+							title="4G (p/n: &quot;KN-1210-01RU&quot;, hwId: &quot;KN-1210&quot;)" />
+						<options value="ndm,keen;KN-1211-01RU;KN-1211"
+							title="4G (p/n: &quot;KN-1211-01RU&quot;, hwId: &quot;KN-1211&quot;)" />
+						<options value="ndm,keen;KN-1310-01EU;KN-1310"
+							title="Lite (EU) (p/n: &quot;KN-1310-01EU&quot;, hwId: &quot;KN-1310&quot;)" />
+						<options value="ndm,keen;KN-1310-01RU;KN-1310"
+							title="Lite (p/n: &quot;KN-1310-01RU&quot;, hwId: &quot;KN-1310&quot;)" />
+						<options value="ndm,keen;KN-1310-01TR;KN-1310"
+							title="Lite (TR) (p/n: &quot;KN-1310-01TR&quot;, hwId: &quot;KN-1310&quot;)" />
+						<options value="ndm,keen;KN-1311-01RU;KN-1311"
+							title="Lite (p/n: &quot;KN-1311-01RU&quot;, hwId: &quot;KN-1311&quot;)" />
+						<options value="ndm,keen;KN-1311-01TR;KN-1311"
+							title="Lite (TR) (p/n: &quot;KN-1311-01TR&quot;, hwId: &quot;KN-1311&quot;)" />
+						<options value="ndm,keen;KN-1410-01EU;KN-1410"
+							title="Omni (EU) (p/n: &quot;KN-1410-01EU&quot;, hwId: &quot;KN-1410&quot;)" />
+						<options value="ndm,keen;KN-1410-01RU;KN-1410"
+							title="Omni (p/n: &quot;KN-1410-01RU&quot;, hwId: &quot;KN-1410&quot;)" />
+						<options value="ndm,keen;KN-1410-01TR;KN-1410"
+							title="Omni (TR) (p/n: &quot;KN-1410-01TR&quot;, hwId: &quot;KN-1410&quot;)" />
+						<options value="ndm,keen;KN-1510-01EU;KN-1510"
+							title="City (EU) (p/n: &quot;KN-1510-01EU&quot;, hwId: &quot;KN-1510&quot;)" />
+						<options value="ndm,keen;KN-1510-01RU;KN-1510"
+							title="City (p/n: &quot;KN-1510-01RU&quot;, hwId: &quot;KN-1510&quot;)" />
+						<options value="ndm,keen;KN-1510-01TR;KN-1510"
+							title="City (TR) (p/n: &quot;KN-1510-01TR&quot;, hwId: &quot;KN-1510&quot;)" />
+						<options value="ndm,keen;KN-1610-01EU;KN-1610"
+							title="Air (EU) (p/n: &quot;KN-1610-01EU&quot;, hwId: &quot;KN-1610&quot;)" />
+						<options value="ndm,keen;KN-1610-01RU;KN-1610"
+							title="Air (p/n: &quot;KN-1610-01RU&quot;, hwId: &quot;KN-1610&quot;)" />
+						<options value="ndm,keen;KN-1610-01TR;KN-1610"
+							title="Air (TR) (p/n: &quot;KN-1610-01TR&quot;, hwId: &quot;KN-1610&quot;)" />
+						<options value="ndm,keen;KN-1611-01RU;KN-1611"
+							title="Air (p/n: &quot;KN-1611-01RU&quot;, hwId: &quot;KN-1611&quot;)" />
+						<options value="ndm,keen;KN-1611-01TR;KN-1611"
+							title="Air (TR) (p/n: &quot;KN-1611-01TR&quot;, hwId: &quot;KN-1611&quot;)" />
+						<options value="ndm,keen;KN-1710-01EU;KN-1710"
+							title="Extra (EU) (p/n: &quot;KN-1710-01EU&quot;, hwId: &quot;KN-1710&quot;)" />
+						<options value="ndm,keen;KN-1710-01RU;KN-1710"
+							title="Extra (p/n: &quot;KN-1710-01RU&quot;, hwId: &quot;KN-1710&quot;)" />
+						<options value="ndm,keen;KN-1710-01TR;KN-1710"
+							title="Extra (TR) (p/n: &quot;KN-1710-01TR&quot;, hwId: &quot;KN-1710&quot;)" />
+						<options value="ndm,keen;KN-1711-01RU;KN-1711"
+							title="Extra (p/n: &quot;KN-1711-01RU&quot;, hwId: &quot;KN-1711&quot;)" />
+						<options value="ndm,keen;KN-1711-01TR;KN-1711"
+							title="Extra (TR) (p/n: &quot;KN-1711-01TR&quot;, hwId: &quot;KN-1711&quot;)" />
+						<options value="ndm,keen;KN-1810-01EU;KN-1810"
+							title="Ultra (EU) (p/n: &quot;KN-1810-01EU&quot;, hwId: &quot;KN-1810&quot;)" />
+						<options value="ndm,keen;KN-1810-01RU;KN-1810"
+							title="Ultra (p/n: &quot;KN-1810-01RU&quot;, hwId: &quot;KN-1810&quot;)" />
+						<options value="ndm,keen;KN-1810-01TR;KN-1810"
+							title="Ultra (TR) (p/n: &quot;KN-1810-01TR&quot;, hwId: &quot;KN-1810&quot;)" />
+						<options value="ndm,keen;KN-1910-01EU;KN-1910"
+							title="Viva (EU) (p/n: &quot;KN-1910-01EU&quot;, hwId: &quot;KN-1910&quot;)" />
+						<options value="ndm,keen;KN-1910-01RU;KN-1910"
+							title="Viva (p/n: &quot;KN-1910-01RU&quot;, hwId: &quot;KN-1910&quot;)" />
+						<options value="ndm,keen;KN-1910-01TR;KN-1910"
+							title="Viva (TR) (p/n: &quot;KN-1910-01TR&quot;, hwId: &quot;KN-1910&quot;)" />
+						<options value="ndm,keen;KN-2010-01EU;KN-2010"
+							title="DSL (EU) (p/n: &quot;KN-2010-01EU&quot;, hwId: &quot;KN-2010&quot;)" />
+						<options value="ndm,keen;KN-2010-01RU;KN-2010"
+							title="DSL (p/n: &quot;KN-2010-01RU&quot;, hwId: &quot;KN-2010&quot;)" />
+						<options value="ndm,keen;KN-2011-01EU;KN-2011"
+							title="Omni DSL (EU) (p/n: &quot;KN-2011-01EU&quot;, hwId: &quot;KN-2011&quot;)" />
+						<options value="ndm,keen;KN-2011-01TR;KN-2011"
+							title="Omni DSL (TR) (p/n: &quot;KN-2011-01TR&quot;, hwId: &quot;KN-2011&quot;)" />
+						<options value="ndm,keen;KN-2110-01EU;KN-2110"
+							title="Duo (EU) (p/n: &quot;KN-2110-01EU&quot;, hwId: &quot;KN-2110&quot;)" />
+						<options value="ndm,keen;KN-2110-01RU;KN-2110"
+							title="Duo (p/n: &quot;KN-2110-01RU&quot;, hwId: &quot;KN-2110&quot;)" />
+						<options value="ndm,keen;KN-2111-01EU;KN-2111"
+							title="Extra DSL (EU) (p/n: &quot;KN-2111-01EU&quot;, hwId: &quot;KN-2111&quot;)" />
+						<options value="ndm,keen;KN-2111-01TR;KN-2111"
+							title="Extra DSL (TR) (p/n: &quot;KN-2111-01TR&quot;, hwId: &quot;KN-2111&quot;)" />
+						<options value="ndm,keen;KN-2210-01RU;KN-2210"
+							title="Start LTE (p/n: &quot;KN-2210-01RU&quot;, hwId: &quot;KN-2210&quot;)" />
+						<options value="ndm,keen;KN-2210-01TR;KN-2210"
+							title="Start LTE (TR) (p/n: &quot;KN-2210-01TR&quot;, hwId: &quot;KN-2210&quot;)" />
+						<options value="ndm,keen;KN-2310-01RU;KN-2310"
+							title="Giga LTE (p/n: &quot;KN-2310-01RU&quot;, hwId: &quot;KN-2310&quot;)" />
+						<options value="ndm,keen;KN-2310-01TR;KN-2310"
+							title="Giga LTE (TR) (p/n: &quot;KN-2310-01TR&quot;, hwId: &quot;KN-2310&quot;)" />
+						<options value="ndm,keen;KN-2410-01RU;KN-2410"
+							title="Viva DSL (p/n: &quot;KN-2410-01RU&quot;, hwId: &quot;KN-2410&quot;)" />
+						<options value="ndm,keen;KN-2610-01RU;KN-2610"
+							title="Giga X (p/n: &quot;KN-2610-01RU&quot;, hwId: &quot;KN-2610&quot;)" />
+						<options value="ndm,keen;KN-2710-01RU;KN-2710"
+							title="Ultra X (p/n: &quot;KN-2710-01RU&quot;, hwId: &quot;KN-2710&quot;)" />
+						<options value="ndm,keen;KN-3010-01RU;KN-3010"
+							title="Swift (p/n: &quot;KN-3010-01RU&quot;, hwId: &quot;KN-3010&quot;)" />
+						<options value="ndm,keen;KN-3010-01TR;KN-3010"
+							title="Swift (TR) (p/n: &quot;KN-3010-01TR&quot;, hwId: &quot;KN-3010&quot;)" />
+						<options value="ndm,zyxel;14300-05BB-S;knv_rb"
+							title="Keenetic VDSL (p/n: &quot;14300-05BB-S&quot;, hwId: &quot;knv_rb&quot;)" />
+						<options value="ndm,zyxel;AMG1312-T10B;kna_rc"
+							title="N300A1E4U1 (p/n: &quot;AMG1312-T10B&quot;, hwId: &quot;kna_rc&quot;)" />
+						<options value="ndm,zyxel;EMG2880-T10A;kng_re"
+							title="Keenetic Giga III (p/n: &quot;EMG2880-T10A&quot;, hwId: &quot;kng_re&quot;)" />
+						<options value="ndm,zyxel;91-003-222012B;kn_ra"
+							title="Keenetic (p/n: &quot;91-003-222012B&quot;, hwId: &quot;kn_ra&quot;)" />
+						<options value="ndm,zyxel;91-003-225005B;kg_ra"
+							title="Keenetic 4G (p/n: &quot;91-003-225005B&quot;, hwId: &quot;kg_ra&quot;)" />
+						<options value="ndm,zyxel;91-003-240005B;kl_ra"
+							title="Keenetic Lite (p/n: &quot;91-003-240005B&quot;, hwId: &quot;kl_ra&quot;)" />
+						<options value="ndm,zyxel;91-003-230005B;kng_ra"
+							title="Keenetic Giga (p/n: &quot;91-003-230005B&quot;, hwId: &quot;kng_ra&quot;)" />
+						<options value="ndm,zyxel;NBG4104-RU0101F;kl_rb"
+							title="Keenetic Lite (p/n: &quot;NBG4104-RU0101F&quot;, hwId: &quot;kl_rb&quot;)" />
+						<options value="ndm,zyxel;NBG4114-RU0101F;kg_rb"
+							title="Keenetic 4G (p/n: &quot;NBG4114-RU0101F&quot;, hwId: &quot;kg_rb&quot;)" />
+						<options value="ndm,zyxel;NBG4215-RU0101F;kn_rb"
+							title="Keenetic II (p/n: &quot;NBG4215-RU0101F&quot;, hwId: &quot;kn_rb&quot;)" />
+						<options value="ndm,zyxel;NBG5615-RU0101F;ku_ra"
+							title="Keenetic Ultra (p/n: &quot;NBG5615-RU0101F&quot;, hwId: &quot;ku_ra&quot;)" />
+						<options value="zyxel,zyxel;37-004-110010Y;none"
+							title="M8T1E1 (p/n: &quot;37-004-110010Y&quot;, hwId: &quot;none&quot;)" />
+						<options value="zyxel,zyxel;37-004-400001M;none"
+							title="X8004 E-iCard Internal Line (p/n: &quot;37-004-400001M&quot;, hwId: &quot;none&quot;)" />
+						<options value="zyxel,zyxel;37-004-400001U;none"
+							title="X8004 E-iCard 1-year Update (p/n: &quot;37-004-400001U&quot;, hwId: &quot;none&quot;)" />
+						<options value="zyxel,zyxel;37-004-400010M;none"
+							title="X8004 E-iCard External Line (p/n: &quot;37-004-400010M&quot;, hwId: &quot;none&quot;)" />
+						<options value="zyxel,zyxel;37-004-400011E;none"
+							title="X8004 (p/n: &quot;37-004-400011E&quot;, hwId: &quot;none&quot;)" />
+						<options value="zyxel,zyxel;37-004-401000M;none"
+							title="X8004 E-iCard Contact-Center User (p/n: &quot;37-004-401000M&quot;, hwId: &quot;none&quot;)" />
+						<options value="zyxel,zyxel;37-004-401100M;none"
+							title="X8004 E-iCard Contact-Center Engine + 1 User (p/n: &quot;37-004-401100M&quot;, hwId: &quot;none&quot;)" />
+						<options value="zyxel,zyxel;37-004-410000M;none"
+							title="X8004 E-iCard Integration Kernal (p/n: &quot;37-004-410000M&quot;, hwId: &quot;none&quot;)" />
+						<options value="zyxel,zyxel;37-004-804410Y;none"
+							title="M8FO4FS4 (p/n: &quot;37-004-804410Y&quot;, hwId: &quot;none&quot;)" />
+						<options value="zyxel,zyxel;37-004-808010Y;none"
+							title="M8FO8 (p/n: &quot;37-004-808010Y&quot;, hwId: &quot;none&quot;)" />
+						<options value="zyxel,zyxel;91-016-015009B;none"
+							title="NSA210 EE (p/n: &quot;91-016-015009B&quot;, hwId: &quot;none&quot;)" />
+						<options value="zyxel,zyxel;91-016-021007B;none"
+							title="NSA221 EE (p/n: &quot;91-016-021007B&quot;, hwId: &quot;none&quot;)" />
+						<options value="ndm,zyxel;NBG4615V2-RU0101F;kng_rb"
+							title="Keenetic Giga II (p/n: &quot;NBG4615V2-RU0101F&quot;, hwId: &quot;kng_rb&quot;)" />
+						<options value="ndm,zyxel;not available yet;udsl_ra"
+							title="Prototype Keenetic Plus DSL Test (p/n: &quot;not available yet&quot;, hwId: &quot;udsl_ra&quot;)" />
+						<options value="zyxel,zyxel;AMG1202-T10A-RU01F;none"
+							title="P660HN Lite EE (Annex A) (p/n: &quot;AMG1202-T10A-RU01F&quot;, hwId: &quot;none&quot;)" />
+						<options value="ndm,zyxel;EMG1202-R10B-RU01V1F;kl_rd"
+							title="Keenetic Start (p/n: &quot;EMG1202-R10B-RU01V1F&quot;, hwId: &quot;kl_rd&quot;)" />
+						<options value="ndm,zyxel;EMG1300-T10A-RU01V1F;kl_rg"
+							title="Keenetic Start II (p/n: &quot;EMG1300-T10A-RU01V1F&quot;, hwId: &quot;kl_rg&quot;)" />
+						<options value="ndm,zyxel;EMG1301-T10A-RU01V1F;kg_rh"
+							title="Keenetic 4G III (Rev.B) (p/n: &quot;EMG1301-T10A-RU01V1F&quot;, hwId: &quot;kg_rh&quot;)" />
+						<options value="ndm,zyxel;EMG1302-R10A-RU01V1F;kl_rc"
+							title="Keenetic Lite II (p/n: &quot;EMG1302-R10A-RU01V1F&quot;, hwId: &quot;kl_rc&quot;)" />
+						<options value="ndm,zyxel;EMG1302-R10B-RU01V1F;kl_rf"
+							title="Keenetic Lite III (p/n: &quot;EMG1302-R10B-RU01V1F&quot;, hwId: &quot;kl_rf&quot;)" />
+						<options value="ndm,zyxel;EMG1311-T10A-RU01V1F;kl_rh"
+							title="Keenetic Lite III Rev.B (p/n: &quot;EMG1311-T10A-RU01V1F&quot;, hwId: &quot;kl_rh&quot;)" />
+						<options value="ndm,zyxel;EMG1312-R10A-RU01V1F;kn_rc"
+							title="Keenetic Omni (p/n: &quot;EMG1312-R10A-RU01V1F&quot;, hwId: &quot;kn_rc&quot;)" />
+						<options value="ndm,zyxel;EMG1312-R10B-RU01V1F;kn_rg"
+							title="Keenetic 4G III (p/n: &quot;EMG1312-R10B-RU01V1F&quot;, hwId: &quot;kn_rg&quot;)" />
+						<options value="ndm,zyxel;EMG1312-R10C-RU01V1F;kn_rf"
+							title="Keenetic Omni II (p/n: &quot;EMG1312-R10C-RU01V1F&quot;, hwId: &quot;kn_rf&quot;)" />
+						<options value="ndm,zyxel;EMG1316-R10A-RU02V1F;kn_rd"
+							title="RT-1W4L1USBn (p/n: &quot;EMG1316-R10A-RU02V1F&quot;, hwId: &quot;kn_rd&quot;)" />
+						<options value="ndm,zyxel;EMG2525-T10A-RU01V1F;ku_rc"
+							title="Keenetic Extra (p/n: &quot;EMG2525-T10A-RU01V1F&quot;, hwId: &quot;ku_rc&quot;)" />
+						<options value="ndm,zyxel;EMG4310-T10A-RU01V1F;in_rb"
+							title="Keenetic III (p/n: &quot;EMG4310-T10A-RU01V1F&quot;, hwId: &quot;in_rb&quot;)" />
+						<options value="ndm,zyxel;AMG1216-T10C-RU01V1S;kla_ra"
+							title="N150A1E4U2 (p/n: &quot;AMG1216-T10C-RU01V1S&quot;, hwId: &quot;kla_ra&quot;)" />
+						<options value="ndm,zyxel;AMG1312-T10B-RU01V1F;kna_rc"
+							title="PS-530 (p/n: &quot;AMG1312-T10B-RU01V1F&quot;, hwId: &quot;kna_rc&quot;)" />
+						<options value="ndm,zyxel;AMG1312-T10B-RU01V2F;kna_rc"
+							title="N300A1E4U1 (p/n: &quot;AMG1312-T10B-RU01V2F&quot;, hwId: &quot;kna_rc&quot;)" />
+						<options value="ndm,zyxel;AMG1316-T10C-RU01V1F;kna_ra"
+							title="Keenetic DSL (p/n: &quot;AMG1316-T10C-RU01V1F&quot;, hwId: &quot;kna_ra&quot;)" />
+						<options value="ndm,zyxel;AMG1316-T10C-RU02V1S;kna_ra"
+							title="N300A1E4U2 (p/n: &quot;AMG1316-T10C-RU02V1S&quot;, hwId: &quot;kna_ra&quot;)" />
+						<options value="ndm,zyxel;AMG1316-T10C-RU02V1S;kna_rb"
+							title="N300A1E4U2 (p/n: &quot;AMG1316-T10C-RU02V1S&quot;, hwId: &quot;kna_rb&quot;)" />
+						<options value="ndm,zyxel;AMG5314-T10C-RU01V1F;ina_ra"
+							title="Keenetic VOX (p/n: &quot;AMG5314-T10C-RU01V1F&quot;, hwId: &quot;ina_ra&quot;)" />
+						<options value="ndm,zyxel;AMG5314-T10C-RU02V1S;ina_ra"
+							title="N300A1E4U2F2 (p/n: &quot;AMG5314-T10C-RU02V1S&quot;, hwId: &quot;ina_ra&quot;)" />
+						<options value="ndm,zyxel;AMG5314-T10C-RU02V1S;ina_rb"
+							title="N300A1E4U2F2 (p/n: &quot;AMG5314-T10C-RU02V1S&quot;, hwId: &quot;ina_rb&quot;)" />
+						<options value="ndm,zyxel;EMG1212-R10B-RU01V1F;kge_rd"
+							title="Keenetic 4G II (p/n: &quot;EMG1212-R10B-RU01V1F&quot;, hwId: &quot;kge_rd&quot;)" />
+						<options value="ndm,zyxel;EMG2325-T10A-RU01V1F;kng_rc"
+							title="Keenetic Viva (p/n: &quot;EMG2325-T10A-RU01V1F&quot;, hwId: &quot;kng_rc&quot;)" />
+						<options value="ndm,zyxel;EMG2881-T20A-RU01V1F;kng_rf"
+							title="Keenetic Giga IV (p/n: &quot;EMG2881-T20A-RU01V1F&quot;, hwId: &quot;kng_rf&quot;)" />
+						<options value="zyxel,zyxel;AMG1302-T10A-RU01V1F;none"
+							title="P660HTN EE (Annex A) (p/n: &quot;AMG1302-T10A-RU01V1F&quot;, hwId: &quot;none&quot;)" />
+						<options value="ndm,zyxel;LTE1311-A004-RU01V1F;ingt_rb"
+							title="Keenetic LTE (p/n: &quot;LTE1311-A004-RU01V1F&quot;, hwId: &quot;ingt_rb&quot;)" />
+					</field>
+				</fields>
+			</options>
+			<options value="2"
+				title="Type in exact &quot;hwId&quot; value">
+				<fields>
+					<field name="hwId" title="NDM Hardware ID" required="false"
+						value="" />
+				</fields>
+			</options>
+			<options value="3" title="Find Product by License Number">
+				<fields>
+					<field name="--ui-user-auth" type="hidden" value="true" />
+					<field name="license" title="License" required="false"
+						value="" />
+				</fields>
+			</options>
+			<options value="0" title="The Alternative Way">
+				<fields>
+					<field type="constant" variant="sequence" elementName="span">
+						<sequence>
+							<span>Jump to &quot;</span>
+							<span layout="formatted" variant="link" href="/listProducts"
+								cssClass="ui-bold">
+								<default layout="formatted" variant="icon" icon="images" />
+								<default> Product List</default>
+							</span>
+							<span>&quot; or &quot;</span>
+							<span layout="formatted" variant="link"
+								href="/ndbs/listSetupLicenses" cssClass="ui-bold">
+								<default layout="formatted" variant="icon"
+									icon="user_edit" />
+								<default> Setup License List</default>
+							</span>
+							<span>&quot; and click on the </span>
+							<span layout="formatted" variant="icon" icon="disk" />
+							<span> icon in the product&#39;s row.</span>
+						</sequence>
+					</field>
+				</fields>
+			</options>
+		</field>
+		<submit icon="disk" title="Make Firmware..." />
+		<help src="/documentation#ndbs/makeFirmware" />
+	</fields>
+	<values></values>
+</form>
